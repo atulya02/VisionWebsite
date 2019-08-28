@@ -1,0 +1,95 @@
+*, *:before, *:after{
+		  margin: 0;
+		  padding: 0;
+		  -webkit-box-sizing: border-box;
+		  -moz-box-sizing:border-box;
+		  box-sizing: border-box;
+}
+.container{
+		padding: 1em 0;
+		width:95%;
+		margin-left: auto;
+		margin-right: auto;
+}
+main{
+	text-transform: none;
+}
+h4{
+	text-transform: uppercase;
+	letter-spacing: 10px;
+}
+strong{
+	color: #444;
+}
+.subHeadText{
+		font-family: 'Helvetica Neue', 'Arial', 'sans-serif';
+		font-weight: normal;
+		letter-spacing: 1.2px;
+		font-size: 14px;
+		color: #999;
+}
+.productDetails{
+	font-family: 'Hind', 'Arial', 'sans-serif', sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+}
+
+.productDetails h5{
+	font-weight: 400;
+	color: #444;
+	padding: 20px 0 10px 0;
+}
+.text-discription{
+	font-size: 12px;
+	color: #999;
+}
+.imgHeadEvents{
+	height: 400px;
+	background-position: center center;
+	background-image: url(../images/01596free.jpg);
+	background-size: cover;
+}
+.toolBox{
+	box-sizing: border-box;
+	border: 1px solid #fff;
+	margin: 20px;
+	padding: 20px;
+	border-radius: 5px;
+	-webkit-box-shadow: 0 0 25px 0 rgba(11,25,29,.1);
+	-moz-box-shadow: 0 0 25px 0 rgba(11,25,29,.1);
+	box-shadow: 0 0 25px 0 rgba(11,25,29,.1);
+	text-align: left;
+}
+.toolBox h3{
+	font-size: 20px;
+}
+.item{
+	width: 380px;
+	height: auto;
+	margin: 25px auto;
+}
+@media only screen and (max-width: 600px) {
+	.item {
+	 width: 295px;
+	}
+}	
+/*Footnote*/
+.footnote{
+	background-color: #444;
+	float: left;
+	display: inline-block;
+	text-decoration: none;
+	height: 50px;
+	line-height: 50px;
+	font-size: 15px;	
+}
+.footnote a{
+	padding-left: 20px;
+}
+.footnote a{
+	color: #f2f2f2;
+}
+.footnote a:hover{
+	padding-left: 10px;
+}
+
