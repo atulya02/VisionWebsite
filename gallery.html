@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-127849592-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-127849592-1');
+</script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/sl.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link type="text/css" rel="stylesheet" href="css/style.css" media="screen,projection">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+    <title>Gallery</title>
+    <style>
+        *, *:before, *:after{
+            margin: 0;
+            padding: 0;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing:border-box;
+            box-sizing: border-box;
+        }
+        .container{
+            padding: 1em 0;
+            width:95%;
+        }
+        .container .title{
+            text-align: center;
+        }
+        .ev{
+            margin: 50px auto;
+            text-align: center;
+            font-family: 'Dosis', 'Arial', sans-serif;
+            color: #f0f0f0;
+        }
+        .event {
+            height: auto;
+            background-color:rgba(5,5,5,0.4)
+        }
+        .events{
+            font-family: 'Dosis', 'Arial', 'sans-serif', sans-serif;
+            color: #f0f0f0;
+            margin-top: 40vh;
+            letter-spacing: 20px;
+            font-weight: 500;
+        }
+        .subHeader{
+            margin: 30px auto;
+            font-weight: 700;
+            color: #f0f0f0;
+        }
+        .parallax-container {
+            height: 100vh;
+        }
+
+        .content {
+            position: relative;
+            width: 90%;
+            max-width: 400px;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .content .content-overlay {
+            background: rgba(0,0,0,0.8);
+            position: absolute;
+            height: 99%;
+            width: 100%;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            opacity: 0;
+            -webkit-transition: all 0.4s ease-in-out 0s;
+            -moz-transition: all 0.4s ease-in-out 0s;
+            transition: all 0.4s ease-in-out 0s;
+        }
+
+        .content:hover .content-overlay{
+            opacity: 1;
+        }
+
+        .content-image{
+            width: 100%;
+        }
+
+        .content-details {
+            position: absolute;
+            text-align: center;
+            padding-left: 1em;
+            padding-right: 1em;
+            width: 100%;
+            top: 50%;
+            left: 50%;
+            opacity: 0;
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            -webkit-transition: all 0.3s ease-in-out 0s;
+            -moz-transition: all 0.3s ease-in-out 0s;
+            transition: all 0.3s ease-in-out 0s;
+        }
+
+        a{
+            text-decoration: none;
+            color: white;
+        }
+        .content:hover .content-details{
+            top: 50%;
+            left: 50%;
+            opacity: 1;
+        }
+
+        .content-details .content-more{
+            color: #fff;
+            font-weight: 500;
+            letter-spacing: 0.15em;
+            margin-bottom: 0.5em;
+            text-transform: uppercase;
+            display: inline-block;
+            padding: 10px 25px;
+            border: 3px solid #fff;
+            border-radius: 20px;
+            background-color: rgba(0,0,0,0.4);
+        }
+        .content-details .content-more:hover{
+            background-color: #f5f5f5;
+            border-color: rgba(0,0,0,0.4);
+            color: #333;
+        }
+
+        .fadeIn-bottom{
+            top: 80%;
+        }
+
+        .title{
+            color: #444;
+            margin-top: 20px;
+            margin-bottom: 0px;
+            font-size: 18px;
+            font-weight: 600;
+            text-transform: capitalize;
+            letter-spacing: 1.2px;
+        }
+        .subTitle{
+            color: #999;
+            margin-top:0px;
+            margin-bottom: 20px;
+            font-size: 14px;
+            text-transform: capitalize;
+            text-transform: capitalize;
+            letter-spacing: 1.2px;
+        }
+        .holder {
+            display: flex;
+            justify-content: center;
+        }
+
+        .masonary {
+            display: flex;
+            margin: 50px 15px;
+            flex-flow: column wrap;
+        }
+
+        .gray-img {
+            -webkit-filter: grayscale(90%) brightness(120%) contrast(80%); /* Safari 6.0 - 9.0 */
+            filter: grayscale(90%) brightness(120%) contrast(80%);
+        }
+
+        .gray-img:hover {
+            filter: none;
+        }
+        ::-webkit-scrollbar
+            {
+            width:5px;
+            }
+
+            ::-webkit-scrollbar-track
+            {
+                box-shadow:inset 0 0 5px grey;
+                border-radius: 10px;
+                background:gray;
+
+            }
+            ::-webkit-scrollbar-thumb {
+                background: black;
+
+            }
+            nav ul li a {
+                color: #D0D3D4;
+            }
+            nav ul li a:hover {
+                color: #fff;
+                background-color: #000; 
+            }
+            nav ul li.active a {
+                color: #fff;
+            }
+            nav ul li.active a:hover {
+                color: #fff;
+                background-color: transparent;
+            } 
+            @media only screen and (max-width: 600px) {
+                .masonary{
+                    display: block;
+                    margin: 0 20px;
+                }
+                .holder{
+                    display: block;
+                }
+                .masonary img{
+                    margin:20px 0;
+                }
+            
+                @media (min-width: 768px) and (max-width: 1024px) {
+                .events {
+                    letter-spacing: 17px;
+                }
+            }
+            @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+                .events {
+                    letter-spacing: 20px;
+                }
+            }
+            @media (min-width: 320px) and (max-width: 480px) {
+                .events {
+                    letter-spacing: 9px;
+                }
+            }}
+     
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <ul id="dropdown1" class="dropdown-content">
+            <li><a href="Noesis.html" class="drp">Noesis</a></li>
+            <li><a href="Techno.html" class="drp">Technosearch</a></li>
+            <li><a href="workshop.html" class="drp">Workshop</a></li>
+        </ul>
+        <ul id="dropdown2" class="dropdown-content">
+            
+            <li><a href="prefinal.html" class="drp">Pre-Final Year</a></li>
+            <li><a href="finalyr.html" class="drp">Final Year</a></li>
+        </ul>
+        <nav class="target">
+            <div class="nav-wrapper" style="padding-left: 30px;padding-right: 25px">
+                <a href="index.html" class="brand-logo" style="padding-top: 8px;"><img src="images/logo_dark_old.png" alt=""
+                        height="30" width="97"></a>
+                <a href="#" data-activates="mobile-demo" class="button-collapse right"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="index.html">home</a></li>
+                    <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Events<i class="material-icons right drop">arrow_drop_down</i></a></li>
+                    <li class="active"><a href="#">gallery</a></li>
+                    <li><a class="dropdown-button" href="#!" data-activates="dropdown2">Team<i class="material-icons right drop">arrow_drop_down</i></a></li>
+                </ul>
+            </div>
+        </nav>
+
+    </header>
+    <ul id="dropdown3" class="dropdown-content side">
+        <li><a href="Noesis.html" class="drp">Noesis</a></li>
+        <li><a href="Techno.html" class="drp">Technosearch</a></li>
+        <li><a href="workshop.html" class="drp">Workshop</a></li>
+    </ul>
+    <ul id="dropdown4" class="dropdown-content side">
+        
+        <li><a href="prefinal.html" class="drp">Pre-Final Year</a></li>
+        <li><a href="finalyr.html" class="drp">Final Year</a></li>
+    </ul>
+    <ul class="side-nav" id="mobile-demo">
+        <li><a href="index.html">home</a></li>
+        <li><a class="dropdown-button" href="#!" data-activates="dropdown3">Events<i class="material-icons right">arrow_drop_down</i></a>
+        </li>
+        <li class="active"><a href="#">gallery</a></li>
+        <li><a class="dropdown-button" href="#!" data-activates="dropdown4">Team<i class="material-icons right">arrow_drop_down</i></a>
+        </li>
+    </ul>
+
+    <div class="parallax-container center event">
+        <div class="parallax"><img src="images/collage_polarr1.jpg"></div>
+
+        <div class="section container">
+            <div class="row center">
+                <h2 class="header events">GALLERY</h2>
+                <p class="subHeader">IMAGES THAT TELL STORY</p>
+            </div>
+        </div>
+    </div>
+    <div class='thetop'></div>
+    <div class="container">
+        <div class="holder">
+            <div class="masonary">
+                <div style="margin-bottom: 10px">
+                    <a href="images/gallery/2.jpg" data-lightbox="roadtrip">
+                        <img class="responsive-img z-depth-2 gray-img" src="images/gallery/final/2.jpg">
+                    </a>
+                </div>
+                <div style="margin-bottom: 10px">
+                    <a href="images/gallery/3.jpg" data-lightbox="roadtrip">
+                        <img class="responsive-img z-depth-2 gray-img" src="images/gallery/final/3.jpg">
+                    </a>
+                </div>
+                <div style="margin-bottom: 10px">
+                    <a href="images/gallery/4.jpg" data-lightbox="roadtrip">
+                        <img class="responsive-img z-depth-2 gray-img" src="images/gallery/final/4.jpg">
+                    </a>
+                </div>
+                <div style="margin-bottom: 10px">
+                    <a href="images/gallery/5.jpg" data-lightbox="roadtrip">
+                        <img class="responsive-img z-depth-2 gray-img" src="images/gallery/final/5.jpg">
+                    </a>
+                </div>
+            </div>
+            <div class="masonary">
+                <div style="margin-bottom: 10px">
+                    <a href="images/gallery/7.jpg" data-lightbox="roadtrip">
+                        <img class="responsive-img z-depth-2 gray-img" src="images/gallery/final/7.jpg">
+                    </a>
+                </div>
+                <div style="margin-bottom: 10px">
+                    <a href="images/gallery/1.jpg" data-lightbox="roadtrip">
+                        <img class="responsive-img z-depth-2 gray-img" src="images/gallery/final/1.jpg">
+                    </a>
+                </div>
+                <div style="margin-bottom: 10px">
+                    <a href="images/gallery/9.jpg" data-lightbox="roadtrip">
+                        <img class="responsive-img z-depth-2 gray-img" src="images/gallery/final/9.jpg">
+                    </a>
+                </div>
+                <div style="margin-bottom: 10px">
+                    <a href="images/gallery/12.jpg" data-lightbox="roadtrip">
+                        <img class="responsive-img z-depth-2 gray-img" src="images/gallery/final/12.jpg">
+                    </a>
+                </div>
+            </div>
+            <div class="masonary">
+                <div style="margin-bottom: 10px">
+                    <a href="images/gallery/16.jpg" data-lightbox="roadtrip">
+                        <img class="responsive-img z-depth-2 gray-img" src="images/gallery/final/16.jpg">
+                    </a>
+                </div>
+                <div style="margin-bottom: 10px">
+                    <a href="images/gallery/17.jpg" data-lightbox="roadtrip">
+                        <img class="responsive-img z-depth-2 gray-img" src="images/gallery/final/17.jpg">
+                    </a>
+                </div>
+                <div style="margin-bottom: 10px">
+                    <a href="images/gallery/22.jpg" data-lightbox="roadtrip">
+                        <img class="responsive-img z-depth-2 gray-img" src="images/gallery/final/22.jpg">
+                    </a>
+                </div>
+                <div style="margin-bottom: 10px">
+                    <a href="images/gallery/19.jpg" data-lightbox="roadtrip">
+                        <img class="responsive-img z-depth-2 gray-img" src="images/gallery/final/19.jpg">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="page-footer">
+        <div class="second-footer">
+            <div class="inner-footer">
+                <h5 class="footer-logo center-align"><img src="images/logo_dark_old.png" alt="" height="30" width="90"></h5>
+                <div class="social-icon">
+                    <ul>
+                        <li><a href="https://www.facebook.com/visionmanit/"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="https://www.youtube.com/channel/UCxX8igM4ziEZGXn9ZmXoBMA"><i class="fa fa-youtube-play"></i></a></li>
+                        
+                    </ul>
+                </div>
+                <div class="copyright">
+                    <p>Vision &copy; All Rights Reserved 2018</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class='scrolltop'>
+        <div class='scrollicon'>
+            <i class="fa fa-4x fa-angle-up"></i>
+        </div>
+    </div>
+    <!--    </div>-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="js/sl.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    
+
+    <script src="js/mod.js"></script>
+    
+</body>
+
+</html>

@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127849592-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-127849592-1');
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link type="text/css" rel="stylesheet" href="css/style.css" media="screen,projection">
+    <link type="text/css" rel="stylesheet" href="css/events.css" media="screen,projection">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <link rel="shortcut icon" type="image/png" href="images/favicon.png" />
+    <title>VISION | NOESIS</title>
+    <style>
+        ::-webkit-scrollbar
+            {
+            width:5px;
+            }
+
+            ::-webkit-scrollbar-track
+            {
+                box-shadow:inset 0 0 5px grey;
+                border-radius: 10px;
+                background:gray;
+
+            }
+            ::-webkit-scrollbar-thumb {
+                background: black;
+
+            }
+            .parallax-container {
+                height: 100vh;
+                width: 100vw;
+            }
+            
+            nav ul li a {
+                color: #D0D3D4;
+            }
+            nav ul li a:hover {
+                color: #fff;
+                background-color: #000; 
+            }
+            nav ul li.active a {
+                color: #fff;
+            }
+            nav ul li.active a:hover {
+                color: #fff;
+            } 
+            .event {
+                background-color: rgba(5,5,5,0.4);
+            }
+            @media (min-width: 768px) and (max-width: 1024px) {
+                .events {
+                    letter-spacing: 17px;
+                }
+            }
+            @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+                .events {
+                    letter-spacing: 20px;
+                }
+            }
+            @media (min-width: 320px) and (max-width: 480px) {
+                .events {
+                    letter-spacing: 7px;
+                }
+            }
+            
+            
+            .card
+        {
+            width: 300px;
+            height: 400px;
+            position: absolute;
+            background-color: #fff;
+            top: 50%;
+            left: 25%;
+            
+            transform-style: preserve-3d;
+            transform: translate(-50%,-50%) perspective(2000px);
+            box-shadow: inset 300px 0 50px            ,0 20px 100px;
+            transition: 1s;
+
+        }
+
+        .card:hover
+        {
+            transform: translate(-50%,-50%) perspective(2000px) rotate(-10deg);
+            box-shadow: inset 20px 0 50px            ,0 10px 100px;
+        }
+
+        .card:before
+        {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background-color: #95a5a6;
+            transform-origin: bottom;
+            transform:skew(-45deg);
+
+        }
+
+        .card:after
+        {
+            content: '';
+            position: absolute;
+            top: 0px;
+            right: -5px;
+            width: 5px;
+            height: 100%;
+            background-color: #7f8c8d;
+            transform-origin: left;
+            transform: skewY(-45deg);
+        }
+
+        .card .imgBox
+        {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transform-origin: left;
+            transition:cubic-bezier(.18,1.55,.76,.37) 1s;
+            z-index: 1;
+        }
+        .card:hover .imgBox
+        {
+            transform: rotateY(-135deg);
+        }
+        .card .details
+        {
+            position: absolute;
+            top: 0;
+            left: 0;
+            box-sizing: border-box;
+            padding: 20px;
+            z-index: -1;
+        }
+        #recruitsoon
+        {
+            height: 400px;
+        }
+        #noesisnotice
+        {
+            position: absolute;
+            top: 25%;
+            width: 37.5%;
+            text-align: center;
+        }
+        .card .imgBox img
+        {
+            width: 300px;
+            height: 400px;
+        }
+        .details h1
+        {
+            font-size: 50px;
+            position: absolute;
+            
+        }
+
+        .details p
+        {
+            position: absolute;
+            top: 25%;
+        }
+        #noesisnotice p
+        {
+            text-align: left;
+            padding-top: 25px;
+        }
+        .details
+        {
+            position: absolute;top:25%;
+        }
+        #comingsoon
+        {
+        font-size: 32px;font-weight: 10px;float: center;
+        position: absolute;
+        top: 350px;
+        }
+        #noesisbookstatement
+        {
+            position: absolute;
+            top: 100px;
+        }
+        /*...............................*/
+
+        @media only screen and (max-width: 640px)
+        {
+
+
+        .card
+        {
+            width: 100px;
+            height: 150px;
+            position: absolute;
+            background-color: #fff;
+            top: 85%;
+            left: 50%;
+        }
+
+        .card:hover
+        {
+            transform: translate(-50%,-50%) perspective(2000px) rotate(-10deg);
+            box-shadow: inset 20px 0 50px            ,0 10px 100px;
+        }
+
+        .card:before
+        {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background-color: #95a5a6;
+            transform-origin: bottom;
+            transform:skew(-45deg);
+
+        }
+
+        .card:after
+        {
+            content: '';
+            position: absolute;
+            top: 0px;
+            right: -5px;
+            width: 5px;
+            height: 100%;
+            background-color: #7f8c8d;
+            transform-origin: left;
+            transform: skewY(-45deg);
+        }
+
+        .card .imgBox
+        {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transform-origin: left;
+            transition:cubic-bezier(.18,1.55,.76,.37) 1s;
+            z-index: 1;
+        }
+        .card:hover .imgBox
+        {
+            transform: rotateY(-135deg);
+        }
+        .card .details
+        {
+            position: absolute;
+            top: 0;
+            left: 0;
+            box-sizing: border-box;
+            padding: 20px;
+            z-index: -1;
+        }
+        .card .imgBox img
+        {
+            width: 100px;
+            height: 150px;
+        }
+        #noesissoon
+        {
+            height: 600px;
+        }
+        #noesisnotice
+        {
+            position: absolute;
+            top: 10%;
+            width: 95%;
+            text-align: center;
+        }
+        #noesisnotice p
+        {
+            text-align: left;
+            padding-left: 5px;
+            padding-top: 25px;
+        }
+        .details p
+        {
+            font-size: 5px;
+        }
+        .details
+        {
+            position: absolute;top:0;
+        }
+        #comingsoon
+        {
+            font-size: 6px;font-weight: 1px;text-align: center;
+            position: absolute;top: 135px;
+        }
+        #noesisbookstatement
+        {
+            position: absolute;top:0px;
+        }
+        }
+
+        /*..............*/
+
+        @media only screen and (min-width: 640px) and (max-width: 1000px)
+        {
+            .card
+        {
+            width: 200px;
+            height: 300px;
+            position: absolute;
+            background-color: #fff;
+            top: 50%;
+            left: 25%;
+        }
+
+        .card:hover
+        {
+            transform: translate(-50%,-50%) perspective(2000px) rotate(-10deg);
+            box-shadow: inset 20px 0 50px            ,0 10px 100px;
+        }
+
+        .card:before
+        {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background-color: #95a5a6;
+            transform-origin: bottom;
+            transform:skew(-45deg);
+
+        }
+
+        .card:after
+        {
+            content: '';
+            position: absolute;
+            top: 0px;
+            right: -5px;
+            width: 5px;
+            height: 100%;
+            background-color: #7f8c8d;
+            transform-origin: left;
+            transform: skewY(-45deg);
+        }
+
+        .card .imgBox
+        {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transform-origin: left;
+            transition:cubic-bezier(.18,1.55,.76,.37) 1s;
+            z-index: 1;
+        }
+        .card:hover .imgBox
+        {
+            transform: rotateY(-135deg);
+        }
+        .card .details
+        {
+            position: absolute;
+            top: 0;
+            left: 0;
+            box-sizing: border-box;
+            padding: 20px;
+            z-index: -1;
+        }
+        .card .imgBox img
+        {
+            width: 200px;
+            height: 300px;
+        }
+        #noesissoon
+        {
+            height: 600px;
+        }
+        #noesisnotice
+        {
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            width: 37.5%;
+            text-align: center;
+        }
+        #noesisnotice p
+        {
+            text-align: left;
+            padding-left: 5px;
+            padding-top: 25px;
+        }
+        .details p
+        {
+            font-size: 10px;
+        }
+        .details
+        {
+            position: absolute;top:100px;
+        }
+        #comingsoon
+        {
+            font-size: 15px;font-weight: 3px;text-align: center;
+            position: absolute;top: 275px;
+        }
+        #noesisbookstatement
+        {
+            position: absolute;top:0px;
+        }
+        a{
+  text-decoration : none;
+} }
+.line-outline{
+  position:relative;
+  width: 376px;
+  font:15px/1 'Josefin Sans',sans-serif;
+  display: inline-block;
+  text-transform: uppercase;
+  padding: 14px 15px 12px 18px;
+  color: #333;
+  height: 44px;
+  border-radius: 22px;
+  letter-spacing: 0.35em;
+  border: 3px solid black;
+  text-indent: 3px;
+  box-sizing: border-box;
+}
+
+.line-outline:hover{
+  background-color: black;
+  color: #f2f2f2;
+  transition: 0.5s ease 0.1s, color 0.2s ease 0.1s;;
+}
+@media only screen and (max-width: 640px){
+.line-outline{
+  position:relative;
+  width: 265px;
+  font:10px/1 'Josefin Sans',sans-serif;
+border: 1.5px solid black;
+}}
+       
+
+    </style>
+</head>
+
+<body>
+    <div class='thetop'></div>
+    <header>
+
+        <ul id="dropdown1" class="dropdown-content">
+            <li><a href="Noesis.html" class="drp">Noesis</a></li>
+            <li><a href="Techno.html" class="drp">Technosearch</a></li>
+            <li><a href="workshop.html" class="drp">Workshop</a></li>
+        </ul>
+        <ul id="dropdown2" class="dropdown-content">
+            
+            <li><a href="prefinal.html" class="drp">Pre-Final Year</a></li>
+            <li><a href="finalyr.html" class="drp">Final Year</a></li>
+        </ul>
+        <nav class="target">
+            <div class="nav-wrapper" style="padding-left: 30px;padding-right: 25px">
+                <a href="index.html" class="brand-logo" style="padding-top: 8px;"><img src="images/logo_dark_old.png"
+                        alt="" height="30" width="97"></a>
+                <a href="#" data-activates="mobile-demo" class="button-collapse right"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="index.html">home</a></li>
+                    <li class="active"><a class="dropdown-button" href="#!" data-activates="dropdown1">Events<i class="material-icons right drop">arrow_drop_down</i></a></li>
+                    <li><a href="gallery.html">gallery</a></li>
+                    <li><a class="dropdown-button" href="#!" data-activates="dropdown2">Team<i class="material-icons right drop">arrow_drop_down</i></a></li>
+                </ul>
+            </div>
+        </nav>
+
+    </header>
+    <ul id="dropdown3" class="dropdown-content side">
+        <li><a href="Noesis.html" class="drp">Noesis</a></li>
+        <li><a href="Techno.html" class="drp">Technosearch</a></li>
+        <li><a href="workshop.html" class="drp">Workshop</a></li>
+    </ul>
+    <ul id="dropdown4" class="dropdown-content side">
+        
+        <li><a href="prefinal.html" class="drp">Pre-Final Year</a></li>
+        <li><a href="finalyr.html" class="drp">Final Year</a></li>
+    </ul>
+    <ul class="side-nav" id="mobile-demo">
+        <li><a href="index.html">home</a></li>
+        <li class="active"><a class="dropdown-button" href="#!" data-activates="dropdown3">Events<i class="material-icons right">arrow_drop_down</i></a></li>
+        <li><a href="gallery.html">gallery</a></li>
+        <li><a class="dropdown-button" href="#!" data-activates="dropdown4">Team<i class="material-icons right">arrow_drop_down</i></a></li>
+    </ul>
+
+
+    <main>
+        <div class="parallax-container center event">
+            <div class="parallax"><img class="cover" src="images/about-back-image.jpg"></div>
+            <div class="section container" style="position:absolute;height:auto;">
+                <div class="row center">
+                    <h2 class="header events">NOESIS</h2>
+                    <p class="subHeader">ANNUAL EVENT</p>
+                </div>
+            </div>
+        </div>
+        <div class="row container">
+            <div class="col s12 m8 l9">
+                <h4>Noesis</h4>
+                <p class="subHeadText">NOESIS is the <strong>Signature Event</strong> of Vision. It was started in year
+                    2011 and still Continues to be The Biggest Technical Event of the Institute after Technosearch, the
+                    Annual Technical Festival of the College. It is a <strong>Two Day Mega Technical Event</strong>
+                    conducted in <strong>Mid September</strong> every year. In the past few years NOESIS received a
+                    Great Response. In year 2k16, it was conducted on 17th and 18th September. Students from Various
+                    Colleges enthusiastically participated in Great Number. There were more than 1000 Participations.
+                    During NOESIS usually <strong>Branch specific Technical Workshops</strong> are organised so as to
+                    acquaint students with the recent advancements in their branches giving them an Edge over with
+                    Hands on Projects.</p>
+            </div>
+            <div class="col s12 m4 l3 productDetails">
+                <h5>EVENT DETAILS</h5>
+                <div class="text-discription">Month: January<br>Branch Wise<br>Place: NTB MANIT</div>
+            </div>
+        </div>
+        <div class="parallax-container"  id="noesissoon" style="background-color: rgba(255,255,255,0.5) ">
+                <div class="parallax"><img src="https://preview.ibb.co/ncxMS9/White_Abstract_background_4.jpg"></div>
+                <div class="v-align">
+                    <div class="row">
+                    <div class="col s12 m12 l6">
+
+                        <div class="card">
+        <div class="imgBox">
+            <img src="images/image.jpg" >
+            
+        </div>
+        <div class="details" style="width: 100%;">
+                <p  id="noesisbookstatement" style="position: absolute;font-family: 'Josefin Sans', sans-serif;">Noesis is an annual mega event of VISION,the technical society of NIT-Bhopal.<br><br>Started in 2011,it challenges engineering students across domains every year.
+
+                    <br><br>
+                    </p>
+                    <span style="" id="comingsoon">COMING SOON</span>
+                <br>
+
+                
+            </div>
+            </div>
+
+                    </div>
+                    <div class="col s12 m12 l6">
+
+                        <div id="noesisnotice" style="">
+                            <h1 style="font-family: 'Josefin Sans', sans-serif;">NOESIS 5.0</h1>
+                            <p style="font-family: 'Josefin Sans', sans-serif;">We are continually faced by great opportunities brilliantly disguised as insoluble problems.<br> With that thought in mind, Vision, announces the 5th edition of NOESIS, a platform which is yet again going to challenge your engineering skills across various domains. <br><br><br>Only this time, it's going to be harder than what you have seen.</p><br>
+                              <div id="ca-link" style="margin-bottom: 5px;">
+                               <a href="https://www.visionmanit.org/noesis05.html" class="line-outline" data-hover="Explore Noesis 5.0"><span>Explore Noesis 5.0</span></a>
+                              </div>
+
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        <div class="container">
+            <div class="row wrap">
+                <div class="col s12 m12 l4">
+                    <div class="item">
+                        <div class="toolBox">
+                            <img class="responsive-img materialboxed" src="images/bytethecode.jpg" alt="">
+                            <div>
+                                <h3>BYTE THE CODE</h3>
+                                <p class="subHeadText">Byte the code is a workshop on python. In this workshop we aim
+                                    to introduce students to the main structure and working of Python. This year it
+                                    witnessed more than 400 participations. The highlight of the event was a project on
+                                    web scrapping. To wrap things up there was a quiz which tested coding skills and
+                                    intellect of the students, and the winners were awarded. Enthusiasm of the students
+                                    was overwhelming.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m12 l4">
+                    <div class="item">
+                        <div class="toolBox">
+                            <img class="responsive-img materialboxed" src="images/temp.png" alt="">
+                            <div>
+                                <h3>ASPHEN-TECH</h3>
+                                <p class="subHeadText">One of the workshops in Noesis, ASPEN-TECH is being organized
+                                    every year. It's a chemical engineering software but anyone who is interested to
+                                    learn, can attend the event. The event is totally student interactive.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m12 l4">
+                    <div class="item">
+                        <div class="toolBox">
+                            <img class="responsive-img materialboxed" src="images/futurena.jpg"
+                                alt="">
+                            <div>
+                                <h3>FUTURENA</h3>
+                                <p class="subHeadText">Have you ever wondered how a small digital watch on your wrist
+                                    works?? Or ever pondered to enter in the world of technology and go beyond theory?
+                                    So here comes Futurena, branch specific technical workshop organized in Noesis so
+                                    as to acquaint students with the recent advancements in electronics circuits giving
+                                    them an edge over with hands on projects in the workshop itself.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row ">
+                <div class="col s12 m12 l6">
+                    <div class="item">
+                        <div class="toolBox">
+                            <img class="responsive-img materialboxed" src="images/autocad.jpg" alt="">
+                            <div>
+                                <h3>AUTO-CAD</h3>
+                                <p class="subHeadText">Were you ever good at drawing diagrams in the School? Ever
+                                    thought of how the buildings or bridges are "Drawn"?Have a small glimpse of
+                                    AutoCAD,which is a computer-aided drafting software program used to create
+                                    blueprints for buildings, bridges, and computer chips, among other things.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m12 l6">
+                    <div class="item">
+                        <div class="toolBox">
+                            <img class="responsive-img materialboxed" src="images/aakriti.jpg" alt="">
+                            <div>
+                                <h3>AAKRITI</h3>
+                                <p class="subHeadText">AAKRITI, a workshop organised to shape and mould the foundations
+                                    of newly generated buds of CIVIL ENGINEERING. Its main focus was on creating an
+                                    interactive session to enlighten Civil Engineering students about their branch and
+                                    open up the new doors of excellence.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class='scrolltop'>
+            <div class='scrollicon'>
+                <i class="fa fa-4x fa-angle-up"></i>
+            </div>
+        </div>
+    </main>
+
+    <footer class="page-footer">
+        <div class="second-footer">
+            <div class="inner-footer">
+                <h5 class="footer-logo center-align"><img src="images/logo_dark_old.png" alt="" height="30" width="90"></h5>
+                <div class="social-icon">
+                    <ul>
+                        <li><a href="https://www.facebook.com/visionmanit/"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="https://www.youtube.com/channel/UCxX8igM4ziEZGXn9ZmXoBMA"><i class="fa fa-youtube-play"></i></a></li>
+                        
+                    </ul>
+                </div>
+                <div class="copyright">
+                    <p>Vision &copy; All Rights Reserved 2018</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/masonry.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/mod.js"></script>
+    <script src="js/scrollback.js"></script>
+</body>
+
+</html>

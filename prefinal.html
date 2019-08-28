@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-127849592-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'UA-127849592-1');
+	</script>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+	<link type="text/css" rel="stylesheet" href="css/style.css" media="screen,projection">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="shortcut icon" type="image/png" href="images/favicon.png" />
+	<title>VISION | TEAM</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta charset="UTF-8" />
+	<style>
+		.row .col.l3{
+					margin-top: 30px;
+				}
+			.row .col.l4{
+					margin-top: 30px;
+				}
+           .container{
+				  padding: 1em 0;
+				  width: 85%;
+				}
+            .ev{
+				margin: 50px auto;
+				text-align: center;
+				font-family: 'Dosis', 'Arial', sans-serif;
+				color: #f0f0f0;
+			}
+			
+			.subHeader{
+				margin: 30px auto;
+				font-weight: 700;
+				color: #f0f0f0;
+			}
+			.parallax-container {
+			  height: 100vh;
+			}
+			.events{
+				font-family: 'Dosis', 'Arial', 'sans-serif', sans-serif;
+				color: #f0f0f0;
+				margin-top: 40vh;
+				letter-spacing: 20px;
+				font-weight: 500;
+			}
+			
+			.subTitle{
+				color: #999;
+				margin-top:0px;
+				margin-bottom: 20px;
+				font-size: 14px;
+				text-transform: capitalize;
+				text-transform: capitalize;
+				letter-spacing: 1.2px;
+			}
+            
+            .container1 {
+              position: relative;
+              width: 100%;
+                height: 100%;
+                left: 0px;
+                top: 0px;
+                overflow-x: hidden;                
+            }
+
+            .image {
+              display: block;
+              width: 100%;
+              height: auto;
+              transition: 0.5s ease;
+            }
+            .container1:hover .image{
+                transform:translateX(25%);   
+            }
+            .overlay {
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              right: 0;
+              background-color: #000;
+              overflow: hidden;
+              width: 0;
+              height: 100%;
+              transition: 0.5s ease;
+            }
+
+            .container1:hover .overlay {
+              width: 50%;
+            }
+
+            .text {
+              color: white;
+              font-size: 12px;
+                font-weight: 700;
+              position: absolute;
+              top: 20%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              -ms-transform: translate(-50%, -50%);
+              font: "Open Sans",sans-serif;
+            }
+            .content {
+			  position: relative;
+			  width: 80%;
+			  max-width: 370px;
+			  margin: auto;
+			  overflow: hidden;
+			}
+			.head-text{
+				letter-spacing: 8px;
+				font-family: 'Hind', 'Arial', 'sans-serif';
+				font-weight: normal;
+				font-size: 26px;
+				color: #303030;
+				margin: 30px 30px auto;
+			}		
+			.text-box{
+				text-align: center;
+			}
+			img{
+				-webkit-filter:grayscale(90%) brightness(120%) contrast(80%); /* Safari 6.0 - 9.0 */
+				filter: grayscale(90%) brightness(120%) contrast(80%);				
+			}
+
+			.tabs{				    
+					border-color: #383838;					
+					font-size: 10px;
+					font-family: 'Montserrat',sans-serif;
+					font-weight: 700;
+					font-style: normal;
+					line-height: 35px;
+					padding: 0px 15px 0px 15px;
+					text-transform: uppercase;
+					display: flex;
+					justify-content: center;
+					overflow-x: auto;
+
+				}
+			.tabs .tab{
+				background-color: #303030;
+				
+				padding: 0px;
+				margin-left: -18px;
+			}
+			
+			.tabs .tab a{
+				color: #bababa;
+			}
+			.tabs .tab a.active,.tabs .tab a:hover{
+				background-color: #000;
+				color: #fff;
+			}
+			.tabs .indicator{			  
+				display: none;
+			}
+			
+			::-webkit-scrollbar
+            {
+            width:5px;
+            }
+
+            ::-webkit-scrollbar-track
+            {
+                box-shadow:inset 0 0 5px grey;
+                border-radius: 10px;
+                background:gray;
+
+            }
+            ::-webkit-scrollbar-thumb {
+                background: black;
+
+						}
+						@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+              .row {
+							margin: 0;
+						}
+            }
+						@media (min-width: 768px) and (max-width: 1024px) {
+              .row {
+							margin: 0;
+						}
+            }
+						@media (min-width: 320px) and (max-width: 480px) {
+							.row {
+							margin: 0;
+						}
+            }
+						
+        </style>
+</head>
+
+<body>
+	<div class='thetop'></div>
+	<header>
+
+		<ul id="dropdown1" class="dropdown-content">
+			<li><a href="Noesis.html" class="drp">Noesis</a></li>
+			<li><a href="Techno.html" class="drp">Technosearch</a></li>
+			<li><a href="workshop.html" class="drp">Workshop</a></li>
+		</ul>
+		<ul id="dropdown2" class="dropdown-content">
+			<!--<li><a href="sophomores.html" class="drp">Sophomores</a></li>-->
+			<li><a href="prefinal.html" class="drp">Pre-Final Year</a></li>
+			<li><a href="finalyr.html" class="drp">Final Year</a></li>
+		</ul>
+		<nav class="target">
+			<div class="nav-wrapper" style="padding-left: 30px;padding-right: 25px">
+				<a href="index.html" class="brand-logo" style="padding-top: 8px;"><img src="images/logo_dark_old.png" alt="" height="30"
+					 width="97"></a>
+				<a href="#" data-activates="mobile-demo" class="button-collapse right"><i class="material-icons">menu</i></a>
+				<ul class="right hide-on-med-and-down">
+					<li><a href="index.html">home</a></li>
+					<li><a class="dropdown-button" href="#!" data-activates="dropdown1">Events<i class="material-icons right drop">arrow_drop_down</i></a></li>
+					<li><a href="gallery.html">gallery</a></li>
+					<li class="active"><a class="dropdown-button" href="#!" data-activates="dropdown2">Team<i class="material-icons right drop">arrow_drop_down</i></a></li>
+				</ul>
+			</div>
+		</nav>
+
+	</header>
+	<ul id="dropdown3" class="dropdown-content side">
+		<li><a href="Noesis.html" class="drp">Noesis</a></li>
+		<li><a href="Techno.html" class="drp">Technosearch</a></li>
+		<li><a href="workshop.html" class="drp">Workshop</a></li>
+	</ul>
+	<ul id="dropdown4" class="dropdown-content side">
+		<li><a href="prefinal.html" class="drp">Pre-Final Year</a></li>
+		<li><a href="finalyr.html" class="drp">Final Year</a></li>
+	</ul>
+	<ul class="side-nav" id="mobile-demo">
+		<li><a href="index.html">home</a></li>
+		<li><a class="dropdown-button" href="#!" data-activates="dropdown3">Events<i class="material-icons right">arrow_drop_down</i></a></li>
+		<li><a href="gallery.html">gallery</a></li>
+		<li class="active"><a class="dropdown-button" href="#!" data-activates="dropdown4">Team<i class="material-icons right">arrow_drop_down</i></a></li>
+	</ul>
+
+
+	<main>
+		<!--Heading parallax Begins-->
+		<div class="parallax-container center event">
+			<div class="parallax"><img src="images/back_events_img.jpg"></div>
+			<div class="section container">
+				<div class="row center">
+					<h2 class="header events">TEAM </h2>
+					<p class="subHeader">VISION | TEAM PRE-FINAL YEAR</p>
+				</div>
+			</div>
+		</div>
+
+
+
+		<div class="container">
+
+			<ul class="tabs">
+				<li class="tab" ><a class="active" href="#test1" >CSE</a></li>
+				<li class="tab"><a href="#test2">EE</a></li>
+				<li class="tab"><a href="#test4">Ece</a></li>
+				<li class="tab"><a href="#test3">CE</a></li>
+				<li class="tab"><a href="#test5">Chem</a></li>
+				
+				
+				
+			</ul>
+			<!--CSE-->
+			<div id="test1">
+				<div class="text-box">
+					<h2 class="head-text">Talk is cheap.Show us the &lt;code/&gt;</h2>;
+				</div>
+				<div class="row ev">
+					
+					<div class="col s12 m6 l3">
+						<div class="content">
+							<div class="container1">
+								<img src="images/team_second_year/Mayank.jpg" alt="Avatar" class="image">
+								<div class="overlay">
+									<div class="text">Mayank Patel</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col s12 m6 l3">
+						<div class="content">
+							<div class="container1">
+								<img src="images/team_second_year/Jasika.jpg" alt="Avatar" class="image">
+								<div class="overlay">
+									<div class="text">Jasika Sahu</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col s12 m6 l3">
+						<div class="content">
+							<div class="container1">
+								<img src="images/team_second_year/Vipul.jpg" alt="Avatar" class="image">
+								<div class="overlay">
+									<div class="text">Vipul Sharma</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col s12 m6 l3">
+						<div class="content">
+							<div class="container1">
+								<img src="images/team_second_year/Arun.jpg" alt="Avatar" class="image">
+								<div class="overlay">
+									<div class="text">Arun Vishwakarma</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row ev">
+					<div class="col s12 m6 l3">
+						<div class="content">
+							<div class="container1">
+								<img src="images/team_second_year/Atulya.jpg" alt="Avatar" class="image">
+								<div class="overlay">
+									<div class="text">Atulya Raj</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col s12 m6 l3">
+						<div class="content">
+							<div class="container1">
+								<img src="images/team_second_year/Drishti.jpg" alt="Avatar" class="image">
+								<div class="overlay">
+									<div class="text">Drishti Beohar</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col s12 m6 l3">
+						<div class="content">
+							<div class="container1">
+								<img src="images/team_second_year/Ammar.jpg" alt="Avatar" class="image">
+								<div class="overlay">
+									<div class="text">Ammar Alavi</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col s12 m6 l3">
+						<div class="content">
+							<div class="container1">
+								<img src="images/team_second_year/Ayesha.jpg" alt="Avatar" class="image">
+								<div class="overlay">
+									<div class="text">Ayesha Rashid</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+				
+				<div class="row ev">
+					<div class="col s12 m6 l3">
+						<div class="content">
+							<div class="container1">
+								<img src="images/team_second_year/Siddharth.jpg" alt="Avatar" class="image">
+								<div class="overlay">
+									<div class="text">Siddharth More</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col s12 m6 l3">
+						<div class="content">
+							<div class="container1">
+								<img src="images/team_second_year/Bhavika.jpg" alt="Avatar" class="image">
+								<div class="overlay">
+									<div class="text">Bhavika Maru</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col s12 m6 l3">
+						<div class="content">
+							<div class="container1">
+								<img src="images/team_second_year/Sanjana.jpg" alt="Avatar" class="image">
+								<div class="overlay">
+									<div class="text">Sanjana Dehariya</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col s12 m6 l3">
+						<div class="content">
+							<div class="container1">
+								<img src="images/team_second_year/Shubham.jpg" alt="Avatar" class="image" >
+								<div class="overlay">
+									<div class="text">Shubham Pal</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+			
+			<div id="test2">
+				<div class="text-box">
+					<h2 class="head-text">Resistance is futile &#40;if&lt;1 ohm&#41; </h2>;
+				</div>
+				<div class="row ev">
+					<div class="col l2"></div>
+					<div class="col s12 m6 l3">
+						<div class="content">
+							<div class="container1">
+								<img src="images/team_second_year/Prajjwal.jpg" alt="Avatar" class="image">
+								<div class="overlay">
+									<div class="text">Prajjwal Kumar</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col s12 m6 l3">
+						<div class="content">
+							<div class="container1">
+								<img src="images/team_second_year/Himani.jpg" alt="Avatar" class="image">
+								<div class="overlay">
+									<div class="text">Himani Dangi</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col s12 m6 l3">
+						<div class="content">
+							<div class="container1">
+								<img src="images/team_second_year/Aman.jpg" alt="Avatar" class="image">
+								<div class="overlay">
+									<div class="text">Aman Rathore</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+				<div class="row ev">
+					<div class="col l2"></div>
+					<div class="col s12 m6 l3 offset-l2">
+						<div class="content">
+							<div class="container1">
+								<img src="images/team_second_year/Udit.jpg" alt="Avatar" class="image">
+								<div class="overlay">
+									<div class="text">Udit Phoolwani</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col s12 m6 l3 ">
+						<div class="content">
+							<div class="container1">
+								<img src="images/team_second_year/Rakshita.jpg" alt="Avatar" class="image">
+								<div class="overlay">
+									<div class="text">Rakshita Asati</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+				
+			</div>
+			
+			<div id="test3">
+				<div class="text-box">
+					
+				</div>
+				<div class="row ev">
+					<div class="col l2"></div>
+					
+					<div class="col s12 m6 l3">
+						<div class="content">
+							<div class="container1">
+								<img src="images/team_second_year/Shivani.jpg" alt="Avatar" class="image">
+								<div class="overlay">
+									<div class="text">Shivani Ojha</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col s12 m6 l3">
+						<div class="content">
+							<div class="container1">
+								<img src="images/team_second_year/Nikhil.jpg" alt="Avatar" class="image">
+								<div class="overlay">
+									<div class="text">Nikhil Parihar</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col s12 m6 l3">
+						<div class="content">
+							<div class="container1">
+								<img src="images/team_second_year/Ashutosh.jpg" alt="Avatar" class="image">
+								<div class="overlay">
+									<div class="text">Ashutosh</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row ev">
+					<div class="col s12 m6 l3 offset-l3">
+						<div class="content">
+							<div class="container1">
+								<img src="images/team_second_year/Lalit.jpg" alt="Avatar" class="image">
+								<div class="overlay">
+									<div class="text">Lalit Modi</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col s12 m6 l3">
+						<div class="content">
+							<div class="container1">
+								<img src="images/team_second_year/Ayushi.jpg" alt="Avatar" class="image">
+								<div class="overlay">
+									<div class="text">Ayushi Kothari<br>(Planning)</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+				
+			</div>
+			
+			<div id="test4">
+				<div class="text-box">
+					<h2 class="head-text">ECE Engineers : It's Complicated</h2>;
+				</div>
+				<div class="row ev">
+					<div class="col s12 m6 l3 ">
+						<div class="content">
+							<div class="container1">
+								<img src="images/team_second_year/Shivam.jpg" alt="Avatar" class="image">
+								<div class="overlay">
+									<div class="text">Shivam Bansal</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col s12 m6 l3">
+						<div class="content">
+							<div class="container1">
+								<img src="images/team_second_year/Ishika1.jpg" alt="Avatar" class="image">
+								<div class="overlay">
+									<div class="text">Ishika Singh</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col s12 m6 l3">
+						<div class="content">
+							<div class="container1">
+								<img src="images/team_second_year/Shivam_Sharma.jpg" alt="Avatar" class="image">
+								<div class="overlay">
+									<div class="text">Shivam Sharma</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col s12 m6 l3">
+						<div class="content">
+							<div class="container1">
+								<img src="images/team_second_year/Namrata.jpg" alt="Avatar" class="image">
+								<div class="overlay">
+									<div class="text">Namrata Jain</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+				<div class="row ev">
+
+					
+					<div class="col s12 m6 l3">
+						<div class="content">
+							<div class="container1">
+								<img src="images/team_second_year/Yash.jpg" alt="Avatar" class="image">
+								<div class="overlay">
+									<div class="text">Yash Chaturvedi</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col s12 m6 l3">
+						<div class="content">
+							<div class="container1">
+								<img src="images/team_second_year/Javed.jpg" alt="Avatar" class="image">
+								<div class="overlay">
+									<div class="text">Javed</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col s12 m6 l3 ">
+						<div class="content">
+							<div class="container1">
+								<img src="images/team_second_year/Anmol.jpg" alt="Avatar" class="image">
+								<div class="overlay">
+									<div class="text">Anmol Gupta</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col s12 m6 l3">
+						<div class="content">
+							<div class="container1">
+								<img src="images/team_second_year/ankit.jpg" alt="Avatar" class="image">
+								<div class="overlay">
+									<div class="text">Ankit Ujjwal</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row ev">
+					
+					
+					<div class="col s12 m6 l3">
+						<div class="content">
+							<div class="container1">
+								<img src="images/team_second_year/Himanshu.jpg" alt="Avatar" class="image">
+								<div class="overlay">
+									<div class="text">Himanshu Mangal</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col s12 m6 l3">
+						<div class="content">
+							<div class="container1">
+								<img src="images/team_second_year/Ashish.jpg" alt="Avatar" class="image">
+								<div class="overlay">
+									<div class="text">Ashish Singhal</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col s12 m6 l3">
+						<div class="content">
+							<div class="container1">
+								<img src="images/team_second_year/Vivek.jpg" alt="Avatar" class="image">
+								<div class="overlay">
+									<div class="text">Vivek Parihar</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col s12 m6 l3">
+						<div class="content">
+							<div class="container1">
+								<img src="images/team_second_year/Shishank.jpg" alt="Avatar" class="image">
+								<div class="overlay">
+									<div class="text">Shishank Sharma</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row ev">
+					
+					
+				</div>
+
+			</div> 
+			<div id="test5">
+				<div class="row ev">
+					<div class="col s12 m6 l3">
+						<div class="content">
+							<div class="container1">
+								<img src="images/team_second_year/Kuldeep.jpg" alt="Avatar" class="image">
+								<div class="overlay">
+									<div class="text">Kuldeep Shrivastav</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col s12 m6 l3">
+						<div class="content">
+							<div class="container1">
+								<img src="images/team_second_year/Ashif.jpg" alt="Avatar" class="image">
+								<div class="overlay">
+									<div class="text">Ashif Khan</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col s12 m6 l3">
+						<div class="content">
+							<div class="container1">
+								<img src="images/team_second_year/Tanish.jpg" alt="Avatar" class="image">
+								<div class="overlay">
+									<div class="text">Tanish Gupta</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col s12 m6 l3">
+						<div class="content">
+							<div class="container1">
+								<img src="images/team_second_year/Adarsh.jpg" alt="Avatar" class="image">
+								<div class="overlay">
+									<div class="text">Adrash Rajput</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			
+			<div class='scrolltop'>
+				<div class='scrollicon'>
+					<i class="fa fa-4x fa-angle-up"></i>
+				</div>
+			</div>
+	</main>
+
+	<footer class="page-footer">
+		<div class="second-footer">
+			<div class="inner-footer">
+				<h5 class="footer-logo center-align"><img src="images/logo_dark_old.png" alt="" height="30" width="90"></h5>
+				<div class="social-icon">
+					<ul>
+						<li><a href="https://www.facebook.com/visionmanit/"><i class="fa fa-facebook"></i></a></li>
+						<li><a href="https://www.youtube.com/channel/UCM1dBAT20ulLHkofolWr3uA"><i class="fa fa-youtube-play"></i></a></li>
+						
+					</ul>
+				</div>
+				<div class="copyright">
+					<p>Vision &copy; All Rights Reserved 2018</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+	<script type="text/javascript" src="js/mod.js"></script>
+	<script>
+		$(document).ready(function () {
+			$(".button-collapse").sideNav();
+			$('.parallax').parallax();
+			$('.target').pushpin({
+				top: 0,
+				offset: 0
+			});
+			/*Tab*/
+			$('.tabs').tabs();
+		});
+
+		$(function () {
+			$(document).scroll(function () {
+				var $nav = $(".nav-wrapper");
+				$nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+				var $navbar = $(".target");
+				$navbar.toggleClass('scroll', $(this).scrollTop() > $navbar.height());
+			});
+		});
+	</script>
+	<script src="js/scrollback.js"></script>
+</body>
+
+</html>

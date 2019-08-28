@@ -1,0 +1,1745 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127849592-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-127849592-1');
+    </script>
+    <link href='https://fonts.googleapis.com/css?family=Spectral' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link type="text/css" rel="stylesheet" href="css/style.css" media="screen,projection">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta charset="UTF-8" />
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="images/favicon.png" />
+    <link rel="stylesheet" type="text/css" href="css/loading-bar.css" />
+    <script type="text/javascript" src="js/loading-bar.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>VISION</title>
+    <style type="text/css">
+        body {
+            display: block;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        nav ul li a {
+            transition: all 0.3s;
+            font-weight: 710;
+        }
+
+        nav ul li a:hover {
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.8)
+        }
+
+        nav ul li.active a:hover {
+            color: #fff;
+            background-color: transparent
+        }
+
+        .bg-container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            background-image: url("https://preview.ibb.co/k72R98/My_Post_blur5.jpg");
+            background-position: center 0;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            background-color: #464646;
+            text-align: center;
+        }
+
+        .clear-image {
+            display: none;
+        }
+
+        @media only screen and (max-width: 640px) {
+            #title {
+                top: 30vh;
+            }
+
+        }
+
+        @media only screen and (max-width: 1390px) {
+            #title {
+                font-size: 5vw;
+            }
+        }
+
+        @media only screen and (max-width: 450px) {
+            #title {
+                font-size: 9vw;
+            }
+            
+        }
+
+        #title {
+            opacity: 1;
+            -webkit-transition: all 1s .5s;
+            -moz-transition: all 1s .5s;
+            transition: all 1s .5s;
+            -webkit-transform: translateX(0);
+            -moz-transform: translateX(0);
+            transform: translateX(0);
+        }
+
+        #title {
+            width: 100%;
+            left: 0;
+            position: absolute;
+            padding-left: 0;
+            top: 43vh;
+            color: #000;
+            text-shadow: 2px 2px 5px #000;
+
+            /*mix-blend-mode: difference;*/
+            font-family: "Playfair Display", serif;
+            text-align: center;
+        }
+
+        h1 {
+            border: 0;
+            margin: 0;
+            padding: 0;
+            font-weight: 400;
+            display: block;
+            line-height: 1.2;
+
+        }
+
+        #title>span {
+            overflow: hidden;
+            display: block;
+        }
+
+        span {
+            border: 0;
+            margin: 0;
+            padding: 0;
+        }
+
+        #title.ready>span>span {
+            transform: translateY(0);
+        }
+
+        #title>span:nth-child(1)>span {
+            -webkit-transition: all .5s;
+            -moz-transition: all .5s;
+            transition: all .5s;
+        }
+
+        #title>span:nth-child(2)>span {
+            -webkit-transition: all .5s .1s;
+            -moz-transition: all .5s .1s;
+            transition: all .5s .1s;
+        }
+
+        .linearicons {
+            font-size: 62px;
+        }
+
+        h3 {
+            letter-spacing: 3px;
+            font-family: 'Hind', 'Arial', 'sans-serif';
+            font-weight: 300;
+            font-size: 25px;
+            line-height: 1.2em;
+            margin-bottom: 10px;
+            margin-top: 10px;
+            text-rendering: optimizelegibility;
+        }
+       
+.overlay-loader {
+    
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: -webkit-radial-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3) 35%, rgba(0, 0, 0, 0.7));
+    background: -moz-radial-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3) 35%, rgba(0, 0, 0, 0.7));
+    background: -ms-radial-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3) 35%, rgba(0, 0, 0, 0.7));
+    background: radial-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3) 35%, rgba(0, 0, 0, 0.7));
+    position: fixed;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            width: 100vw;
+            background: url(images/partical_back.jpg);
+            z-index: 3000;
+           }
+
+.overlay-loader h2 {
+    position: absolute;
+    top: 50%;
+    z-index: 9999;
+    line-height: 100px;
+    height: 100px;
+    margin-top: -50px;
+    font-size: 64px;
+    width: 100%;
+    text-align: center;
+    color: transparent;
+    -webkit-animation: blurFadeInOut 1.5s ease-in backwards;
+    -moz-animation: blurFadeInOut 1.5s ease-in backwards;
+    -ms-animation: blurFadeInOut 1.5s ease-in backwards;
+    animation: blurFadeInOut 1.5s ease-in backwards;
+}
+.overlay-loader h2.frame-1 {
+    -webkit-animation-delay: 2.5s;
+    -moz-animation-delay: 2.5s;
+    -ms-animation-delay: 2.5s;
+    animation-delay: 2.5s;
+}
+.overlay-loader h2.frame-2 {
+    -webkit-animation-delay: 4s;
+    -moz-animation-delay: 4s;
+    -ms-animation-delay: 4s;
+    animation-delay: 4s;
+}
+.overlay-loader h2.frame-3 {
+    -webkit-animation-delay: 5.5s;
+    -moz-animation-delay: 5.5s;
+    -ms-animation-delay: 5.5s;
+    animation-delay: 5.5s;
+}
+.overlay-loader h2.frame-4 {
+    
+    -webkit-animation-delay: 7s;
+    -moz-animation-delay: 7s;
+    -ms-animation-delay: 7s;
+    animation-delay: 7s;
+}
+.overlay-loader h2.frame-5 {
+    -webkit-animation: none;
+    -moz-animation: none;
+    -ms-animation: none;
+    animation: none;
+    color: transparent;
+    text-shadow: 0px 0px 1px #fff;
+}
+.overlay-loader h2.frame-5 span {
+    -webkit-animation: blurFadeIn 3s ease-in 8s backwards;
+    -moz-animation: blurFadeIn 1s ease-in 8s backwards;
+    -ms-animation: blurFadeIn 3s ease-in 8s backwards;
+    animation: blurFadeIn 3s ease-in 8s backwards;
+    color: transparent;
+    text-shadow: 0px 0px 1px #fff;
+}
+.overlay-loader h2.frame-5 span:nth-child(2) {
+    -webkit-animation-delay: 9s;
+    -moz-animation-delay: 9s;
+    -ms-animation-delay: 9s;
+    animation-delay: 9s;
+}
+.overlay-loader h2.frame-5 span:nth-child(3) {
+    -webkit-animation-delay: 10s;
+    -moz-animation-delay: 10s;
+    -ms-animation-delay: 10s;
+    animation-delay: 10s;
+}
+
+
+/**/
+@-webkit-keyframes blurFadeInOut{
+    0%{
+        opacity: 0;
+        text-shadow: 0px 0px 40px #fff;
+        -webkit-transform: scale(1.3);
+    }
+    20%,75%{
+        opacity: 1;
+        text-shadow: 0px 0px 1px #fff;
+        -webkit-transform: scale(1);
+    }
+    100%{
+        opacity: 0;
+        text-shadow: 0px 0px 50px #fff;
+        -webkit-transform: scale(0);
+    }
+}
+@-webkit-keyframes blurFadeIn{
+    0%{
+        opacity: 0;
+        text-shadow: 0px 0px 40px #fff;
+        -webkit-transform: scale(1.3);
+    }
+    50%{
+        opacity: 0.5;
+        text-shadow: 0px 0px 10px #fff;
+        -webkit-transform: scale(1.1);
+    }
+    100%{
+        opacity: 1;
+        text-shadow: 0px 0px 1px #fff;
+        -webkit-transform: scale(1);
+    }
+}
+@-webkit-keyframes fadeInBack{
+    0%{
+        opacity: 0;
+        -webkit-transform: scale(0);
+    }
+    50%{
+        opacity: 0.4;
+        -webkit-transform: scale(2);
+    }
+    100%{
+        opacity: 0.2;
+        -webkit-transform: scale(5);
+    }
+}
+@-webkit-keyframes fadeInRotate{
+    0%{
+        opacity: 0;
+        -webkit-transform: scale(0) rotate(360deg);
+    }
+    100%{
+        opacity: 1;
+        -webkit-transform: scale(1) rotate(0deg);
+    }
+}
+/**/
+@-moz-keyframes blurFadeInOut{
+    0%{
+        opacity: 0;
+        text-shadow: 0px 0px 40px #fff;
+        -moz-transform: scale(1.3);
+    }
+    20%,75%{
+        opacity: 1;
+        text-shadow: 0px 0px 1px #fff;
+        -moz-transform: scale(1);
+    }
+    100%{
+        opacity: 0;
+        text-shadow: 0px 0px 50px #fff;
+        -moz-transform: scale(0);
+    }
+}
+@-moz-keyframes blurFadeIn{
+    0%{
+        opacity: 0;
+        text-shadow: 0px 0px 40px #fff;
+        -moz-transform: scale(1.3);
+    }
+    100%{
+        opacity: 1;
+        text-shadow: 0px 0px 1px #fff;
+        -moz-transform: scale(1);
+    }
+}
+@-moz-keyframes fadeInBack{
+    0%{
+        opacity: 0;
+        -moz-transform: scale(0);
+    }
+    50%{
+        opacity: 0.4;
+        -moz-transform: scale(2);
+    }
+    100%{
+        opacity: 0.2;
+        -moz-transform: scale(5);
+    }
+}
+@-moz-keyframes fadeInRotate{
+    0%{
+        opacity: 0;
+        -moz-transform: scale(0) rotate(360deg);
+    }
+    100%{
+        opacity: 1;
+        -moz-transform: scale(1) rotate(0deg);
+    }
+}
+/**/
+@keyframes blurFadeInOut{
+    0%{
+        opacity: 0;
+        text-shadow: 0px 0px 40px #fff;
+        transform: scale(1.3);
+    }
+    20%,75%{
+        opacity: 1;
+        text-shadow: 0px 0px 1px #fff;
+        transform: scale(1);
+    }
+    100%{
+        opacity: 0;
+        text-shadow: 0px 0px 50px #fff;
+        transform: scale(0);
+    }
+}
+@keyframes blurFadeIn{
+    0%{
+        opacity: 0;
+        text-shadow: 0px 0px 40px #fff;
+        transform: scale(1.3);
+    }
+    50%{
+        opacity: 0.5;
+        text-shadow: 0px 0px 10px #fff;
+        transform: scale(1.1);
+    }
+    100%{
+        opacity: 1;
+        text-shadow: 0px 0px 1px #fff;
+        transform: scale(1);
+    }
+}
+@keyframes fadeInBack{
+    0%{
+        opacity: 0;
+        transform: scale(0);
+    }
+    50%{
+        opacity: 0.4;
+        transform: scale(2);
+    }
+    100%{
+        opacity: 0.2;
+        transform: scale(5);
+    }
+}
+@keyframes fadeInRotate{
+    0%{
+        opacity: 0;
+        transform: scale(0) rotate(360deg);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+    }
+}
+
+
+        @media only screen and (max-width: 991px) {
+
+            .counter-value {
+                font-size: 35px;
+            }
+
+            .type {
+                font-size: 20px;
+            }
+
+        }
+
+        @media only screen and (max-width: 1390px) and (min-width: 992px) {
+
+            .counter-value {
+                font-size: 26px;
+            }
+
+        }
+
+        @media only screen and (max-width: 600px) {
+            .parallax-container {
+                height: 960px;
+            }
+
+            .spacer {
+                height: 40px;
+            }
+
+            .licon {
+                margin-top: 80px;
+            }
+
+            .cspacer {
+                height: 20px;
+            }
+        }
+
+        .parallax-container {
+            display: inline-flex;
+            width: 100%
+        }
+
+        .v-align {
+            margin: 25px auto;
+            width: 100%;
+        }
+
+        .spacer {
+            height: 60px;
+        }
+
+        .cspacer {
+            height: 40px;
+        }
+
+        .counter-value {
+            padding: 8px 0;
+            line-height: 1.3em;
+            font-weight: 500;
+            display: inline;
+            color: #d8d8d8;
+        }
+
+        .icon-top {
+            margin-bottom: 20px;
+        }
+
+        h6 {
+            color: #7F8C8D;
+            font-size: 14px;
+        }
+
+        input[type=text]:not(.browser-default),
+        input[type=password]:not(.browser-default) {
+            width: 75%;
+            margin-bottom: 50px;
+            color: #fff;
+            font-size: 15px;
+            font-weight: 400;
+        }
+
+        .frm {
+            background-image: url("https://image.ibb.co/iJHJBo/Split_Shire_8098_1800x1200.jpg");
+            background-position: center 0;
+            background-repeat: no-repeat;
+            width: 85%;
+            height: 500px;
+            border-radius: 10px;
+            margin: 20px auto;
+            padding: 20px;
+            position: relative;
+            text-align: center;
+
+        }
+
+        blockquote {
+            border: none;
+            color: #000;
+        }
+
+        .tile-title {
+            padding-left: 50px;
+            font-size: 12px;
+            font-weight: 400;
+        }
+
+        .tabs .tab a {
+            color: #fff;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            margin-right: 15px;
+        }
+
+        .tabs .tab a.active {
+            color: #3498DB;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        /*.ui-widget.ui-widget-content {*/
+        /*border: none;*/
+        /*}*/
+
+        /*.ui-widget-content {*/
+        /*background: transparent;*/
+        /*}*/
+
+        .btn {
+            border: 2.5px solid black;
+            background-color: #303030;
+            color: #fff;
+            font-size: 12px;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+
+        .btn:hover {
+            background-color: #424949;
+            color: #FCF3CF;
+            border: 2.5px solid #FCF3CF;
+        }
+
+        .forms {
+            margin-top: 60px;
+        }
+
+        .parallax-container {
+            height: auto;
+        }
+
+        .ldBar-label {
+            color: #fff;
+            font-family: tahoma;
+            font-size: 2.1em;
+            font-weight: 900
+        }
+
+        #container-loader {
+            position: absolute;
+            top: 25%;
+            left: 35%;
+            margin: 0;
+            padding: 0;
+        }
+
+        #overlay-loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            z-index: 9999;
+        }
+
+        #svg1 {
+            width: 640px;
+            height: 640px;
+            position: absolute;
+            top: -124px;
+            left: -91.5px;
+        }
+
+
+        @media only screen and (max-width: 640px) {
+            .spon {
+                margin-bottom:15px;
+	    }
+            svg {
+                width: 150px;
+                height: 150px;
+                position: absolute;
+                top: 0px;
+                left: 0px;
+
+            }
+            .overlay-loader h2
+            {
+                font-size: 32px;
+                line-height: 50px;
+            }
+
+            .ldBar-label {
+                font-width: 25;
+                font-size: .8em;
+                position: absolute;
+                left: 50px top:50%;
+            }
+
+            #svg1 {
+                width: 212px;
+                height: 212px;
+                position: absolute;
+                top: -23px;
+                left: -28.5px;
+            }
+
+            .ldBar.label-center>.ldBar-label {
+                position: absolute;
+                top: 25%;
+                left: 17.5%;
+                -webkit-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+                text-shadow: 0 0 3px #fff
+            }
+
+            #container-loader {
+                position: absolute;
+                left: 30%;
+                top: 25%;
+
+            }
+        }
+        @media only screen and (max-width: 1300px) and (min-width:640px)
+            {
+              svg
+              {
+                width:150px;
+                height: 150px;
+                position: absolute;
+                left: 106.5px;
+                
+              }
+              .ldBar-label
+              {
+                font-width:25;
+                font-size: .8em;
+                position: absolute;left: 100px
+                top:50%;
+              }
+              
+              #loader1
+              {
+                width:250px;
+                height: 250px;
+              }
+              #svg1
+              {
+                width:212px;
+                height: 212px;
+                position: absolute;
+                top:-23px;
+                left:78px;
+              }
+              .ldBar.label-center > .ldBar-label
+              {
+                position:absolute;top:25%;left:41.5%;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%);text-shadow:0 0 3px #fff
+              }
+            }
+
+            @media only screen and (max-width: 450px)
+            {
+              svg
+              {
+                width:150px;
+                height: 150px;
+                
+              }
+              .ldBar-label
+              {
+                font-width:25;
+                font-size: .8em;
+                position: absolute;left: 50px
+                top:50%;
+              }
+              
+              #loader1
+              {
+                width:150px;
+                height: 150px;
+              }
+              #svg1
+              {
+                width:212px;
+                height: 212px;
+                position: absolute;
+                top:-23px;
+                left:-28px;
+              }
+              .ldBar.label-center > .ldBar-label
+              {
+                position:absolute;top:25%;left:17.5%;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%);text-shadow:0 0 3px #fff
+              }
+            }
+            @media only screen and (max-width: 900px) and (min-width:640px)
+            {
+            .spon {
+                margin-bottom:15px;
+	    	}
+              svg
+              {
+                width:150px;
+                height: 150px;
+                position: absolute;
+                left: 69px;
+                
+              }
+              .ldBar-label
+              {
+                font-width:25;
+                font-size: .8em;
+                position: absolute;left: 50px
+                top:50%;
+              }
+              
+              #loader1
+              {
+                width:150px;
+                height: 150px;
+              }
+              #svg1
+              {
+                width:212px;
+                height: 212px;
+                position: absolute;
+                top:-23px;
+                left:40px;
+              }
+              .ldBar.label-center > .ldBar-label
+              {
+                position:absolute;top:25%;left:32.8%;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%);text-shadow:0 0 3px #fff
+              }
+            }
+
+        ::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        ::-webkit-scrollbar-track {
+            box-shadow: inset 0 0 5px grey;
+            border-radius: 10px;
+            background: gray;
+
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: black;
+
+        }
+
+        .mapouter {
+            text-align: right;
+            height: 400px;
+            width: 100%;
+        }
+
+        .gmap_canvas {
+            overflow: hidden;
+            background: none !important;
+            height: 400px;
+            width: 100%;
+        }
+
+        .toolBox {
+            box-sizing: border-box;
+            border: 1px solid #fff;
+            margin: 0px;
+            padding: 10px;
+            border-radius: 5px;
+            -webkit-box-shadow: 0 0 25px 0 rgba(11, 25, 29, .1);
+            -moz-box-shadow: 0 0 25px 0 rgba(11, 25, 29, .1);
+            box-shadow: 0 0 25px 0 rgba(11, 25, 29, .1);
+            text-align: center;
+        }
+
+        .toolBox h3 {
+            font-size: 20px;
+        }
+
+        .item {
+            width: 380px;
+            height: auto;
+            margin: 10px auto;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .item {
+                width: 295px;
+            }
+        }
+
+        .row.con {
+            margin-bottom: 0;
+        }
+
+        .contact {
+            margin-top: 30px;
+        }
+
+        .card
+        {
+            width: 300px;
+            height: 400px;
+            position: absolute;
+            background-color: #fff;
+            top: 50%;
+            left: 25%;
+            
+            transform-style: preserve-3d;
+            transform: translate(-50%,-50%) perspective(2000px);
+            box-shadow: inset 300px 0 50px            ,0 20px 100px;
+            transition: 1s;
+
+        }
+
+        .card:hover
+        {
+            transform: translate(-50%,-50%) perspective(2000px) rotate(-10deg);
+            box-shadow: inset 20px 0 50px            ,0 10px 100px;
+        }
+
+        .card:before
+        {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background-color: #95a5a6;
+            transform-origin: bottom;
+            transform:skew(-45deg);
+
+        }
+
+        .card:after
+        {
+            content: '';
+            position: absolute;
+            top: 0px;
+            right: -5px;
+            width: 5px;
+            height: 100%;
+            background-color: #7f8c8d;
+            transform-origin: left;
+            transform: skewY(-45deg);
+        }
+
+        .card .imgBox
+        {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transform-origin: left;
+            transition:cubic-bezier(.18,1.55,.76,.37) 1s;
+            z-index: 1;
+        }
+        .card:hover .imgBox
+        {
+            transform: rotateY(-135deg);
+        }
+        .card .details
+        {
+            position: absolute;
+            top: 0;
+            left: 0;
+            box-sizing: border-box;
+            padding: 20px;
+            z-index: -1;
+        }
+        #recruitsoon
+        {
+            height: 400px;
+        }
+        #noesisnotice
+        {
+            position: absolute;
+            top: 25%;
+            width: 37.5%;
+            text-align: center;
+        }
+        .card .imgBox img
+        {
+            width: 300px;
+            height: 400px;
+        }
+        .details h1
+        {
+            font-size: 50px;
+            position: absolute;
+            
+        }
+
+        .details p
+        {
+            position: absolute;
+            top: 25%;
+        }
+        #noesisnotice p
+        {
+            text-align: left;
+            padding-top: 25px;
+        }
+        .details
+        {
+            position: absolute;top:25%;
+        }
+        #comingsoon
+        {
+        font-size: 32px;font-weight: 10px;float: center;
+        position: absolute;
+        top: 350px;
+        }
+        #noesisbookstatement
+        {
+            position: absolute;
+            top: 100px;
+        }
+        /*...............................*/
+
+        @media only screen and (max-width: 640px)
+        {
+
+
+        .card
+        {
+            width: 100px;
+            height: 150px;
+            position: absolute;
+            background-color: #fff;
+            top: 85%;
+            left: 50%;
+        }
+
+        .card:hover
+        {
+            transform: translate(-50%,-50%) perspective(2000px) rotate(-10deg);
+            box-shadow: inset 20px 0 50px            ,0 10px 100px;
+        }
+
+        .card:before
+        {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background-color: #95a5a6;
+            transform-origin: bottom;
+            transform:skew(-45deg);
+
+        }
+
+        .card:after
+        {
+            content: '';
+            position: absolute;
+            top: 0px;
+            right: -5px;
+            width: 5px;
+            height: 100%;
+            background-color: #7f8c8d;
+            transform-origin: left;
+            transform: skewY(-45deg);
+        }
+
+        .card .imgBox
+        {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transform-origin: left;
+            transition:cubic-bezier(.18,1.55,.76,.37) 1s;
+            z-index: 1;
+        }
+        .card:hover .imgBox
+        {
+            transform: rotateY(-135deg);
+        }
+        .card .details
+        {
+            position: absolute;
+            top: 0;
+            left: 0;
+            box-sizing: border-box;
+            padding: 20px;
+            z-index: -1;
+        }
+        .card .imgBox img
+        {
+            width: 100px;
+            height: 150px;
+        }
+        #noesissoon
+        {
+            height: 600px;
+        }
+        #noesisnotice
+        {
+            position: absolute;
+            top: 10%;
+            width: 95%;
+            text-align: center;
+        }
+        #noesisnotice p
+        {
+            text-align: left;
+            padding-left: 5px;
+            padding-top: 25px;
+        }
+        .details p
+        {
+            font-size: 5px;
+        }
+        .details
+        {
+            position: absolute;top:0;
+        }
+        #comingsoon
+        {
+            font-size: 6px;font-weight: 1px;text-align: center;
+            position: absolute;top: 135px;
+        }
+        #noesisbookstatement
+        {
+            position: absolute;top:0px;
+        }
+        }
+
+        /*..............*/
+
+        @media only screen and (min-width: 640px) and (max-width: 1000px)
+        {
+            .card
+        {
+            width: 200px;
+            height: 300px;
+            position: absolute;
+            background-color: #fff;
+            top: 50%;
+            left: 25%;
+        }
+
+        .card:hover
+        {
+            transform: translate(-50%,-50%) perspective(2000px) rotate(-10deg);
+            box-shadow: inset 20px 0 50px            ,0 10px 100px;
+        }
+
+        .card:before
+        {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background-color: #95a5a6;
+            transform-origin: bottom;
+            transform:skew(-45deg);
+
+        }
+
+        .card:after
+        {
+            content: '';
+            position: absolute;
+            top: 0px;
+            right: -5px;
+            width: 5px;
+            height: 100%;
+            background-color: #7f8c8d;
+            transform-origin: left;
+            transform: skewY(-45deg);
+        }
+
+        .card .imgBox
+        {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transform-origin: left;
+            transition:cubic-bezier(.18,1.55,.76,.37) 1s;
+            z-index: 1;
+        }
+        .card:hover .imgBox
+        {
+            transform: rotateY(-135deg);
+        }
+        .card .details
+        {
+            position: absolute;
+            top: 0;
+            left: 0;
+            box-sizing: border-box;
+            padding: 20px;
+            z-index: -1;
+        }
+        .card .imgBox img
+        {
+            width: 200px;
+            height: 300px;
+        }
+        #noesissoon
+        {
+            height: 600px;
+        }
+        #noesisnotice
+        {
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            width: 37.5%;
+            text-align: center;
+        }
+        #noesisnotice p
+        {
+            text-align: left;
+            padding-left: 5px;
+            padding-top: 25px;
+        }
+        .details p
+        {
+            font-size: 10px;
+        }
+        .details
+        {
+            position: absolute;top:100px;
+        }
+        #comingsoon
+        {
+            font-size: 15px;font-weight: 3px;text-align: center;
+            position: absolute;top: 275px;
+        }
+        #noesisbookstatement
+        {
+            position: absolute;top:0px;
+        }
+
+        }
+
+        /*.....*/
+a{
+  text-decoration : none;
+}
+.line-outline{
+  position:relative;
+  width: 376px;
+  font:15px/1 'Josefin Sans',sans-serif;
+  display: inline-block;
+  text-transform: uppercase;
+  padding: 14px 15px 12px 18px;
+  color: #333;
+  height: 44px;
+  border-radius: 22px;
+  letter-spacing: 0.35em;
+  border: 3px solid black;
+  text-indent: 3px;
+  box-sizing: border-box;
+}
+
+.line-outline:hover{
+  background-color: black;
+  color: #f2f2f2;
+  transition: 0.5s ease 0.1s, color 0.2s ease 0.1s;;
+}
+#recruit h2{
+font-size: 64px;
+position: absolute;
+left: 15%;
+top: 35%;
+}
+        @media only screen and (max-width: 640px)
+        {
+            #recruit h2{
+font-size: 32px;
+position: absolute;
+left: 10%;
+top: 35%;
+}
+            .overlay-loader h2
+            {
+                font-size: 24px;
+            }
+            #lastframe
+            {
+                font-size: 20px;
+            }
+            .overlay-loader
+            {
+            background-size: 800px;    
+           }
+            #spinnergif
+            {
+                position: absolute;
+                top: 35%;
+                left: 35%;
+            }
+.line-outline{
+  position:relative;
+  width: 265px;
+  font:10px/1 'Josefin Sans',sans-serif;
+border: 1.5px solid black;
+}
+        }
+        @media only screen and (min-width: 640px) and (max-width: 1000px)
+        {
+            .overlay-loader h2
+            {
+                font-size: 32px;
+            }
+            .spinner123 img
+            {
+                position: absolute;top: 35%;left: 45%;
+            }
+        }
+        .spinner123 img
+        {
+            position: absolute;top: 35%;left: 45%;
+        }
+        
+
+    </style>
+</head>
+
+<body>
+    <div class='thetop'></div>
+    <div id="overlay-loader" style="background: #ddd;margin: 0;padding: 0;">
+            <div id="container-loader" style="position: absolute;top: 25%;left:35%;margin: 0;padding: 0;">
+        <div class="ldBar label-center" id="loader1" style="position:absolute;top: 0px;left:0px;"
+        data-type="fill"
+        data-path="M447.25 265.63L431.64 286.31C452.33 256.51 457.53 249.61 447.25 265.63C436.97 281.65 411.2 320.58 369.96 382.42L320 458.02
+        M320 455.05L308.66 440.55C203.44 309.19 133.29 221.61 98.22 177.82C96.98 176.28 152.35 120.55 207.8 134.63C263.24 148.71 307.76 223.02 337.82 240.08C368.14 257.3 406.32 263.01 452.37 257.23
+
+        M368.5 237.59C342.47 227.82 320.46 211.24 302.45 187.85C315.77 189.4 331.33 185.8 349.14 177.04C375.85 163.91 411.66 141.31 435.81 135.31C496.71 120.2 533.8 142.23 527.3 151.16C515.37 167.54 493.48 199.31 461.65 246.47C425.57 250.32 394.52 247.36 368.5 237.59Z"
+        data-fill="data:ldbar/res,bubble(#gray,#fff,35,2)">
+          
+          </div>
+        <svg  id="svg1" style="position:absolute;" preserveAspectRatio="xMidYMid meet" viewBox="0 0 640 640" style=""><defs><path d="M452.33 257.30 447.25 265.63C436.97 281.65 411.2 320.58 369.96 382.42L320 458.02" id="ba8p8dNpg" class="VRrOgcXU_0"></path><path d="M320 455.05L308.66 440.55C203.44 309.19 133.29 221.61 98.22 177.82C96.98 176.28 152.35 120.55 207.8 134.63C263.24 148.71 307.76 223.02 337.82 240.08C368.14 257.3 406.32 263.01 452.37 257.23" id="ifDvsLRU3" class="VRrOgcXU_1"></path><path d="M368.5 237.59C342.47 227.82 320.46 211.24 302.45 187.85C315.77 189.4 331.33 185.8 349.14 177.04C375.85 163.91 411.66 141.31 435.81 135.31C496.71 120.2 533.8 142.23 527.3 151.16C515.37 167.54 493.48 199.31 461.65 246.47C425.57 250.32 394.52 247.36 368.5 237.59Z" id="ceJ9RKFom" class="VRrOgcXU_2"></path></defs><g><g><g><g><use xlink:href="#ba8p8dNpg" opacity="1" fill-opacity="0" stroke="#000"stroke-width="4" stroke-opacity="1"></use></g></g><g><g><use xlink:href="#ifDvsLRU3" opacity="1" fill-opacity="0" stroke="#000" stroke-width="4" stroke-opacity="1"></use></g></g><g><g><use xlink:href="#ceJ9RKFom" opacity="1" fill-opacity="0" stroke="#000" stroke-width="4.5" stroke-opacity="1"></use></g></g></g></g><style data-made-with="vivus-instant">.VRrOgcXU_0{stroke-dasharray:303 305;stroke-dashoffset:304;animation:VRrOgcXU_draw 2000ms linear 0ms forwards;}.VRrOgcXU_1{stroke-dasharray:766 768;stroke-dashoffset:767;animation:VRrOgcXU_draw 4000ms linear 1000ms forwards;}.VRrOgcXU_2{stroke-dasharray:541 543;stroke-dashoffset:542;animation:VRrOgcXU_draw 3000ms linear 2000ms forwards;}@keyframes VRrOgcXU_draw{100%{stroke-dashoffset:0;}}@keyframes VRrOgcXU_fade{0%{stroke-opacity:1;}94.44444444444444%{stroke-opacity:1;}100%{stroke-opacity:0;}}</style></svg>
+
+      <script>
+          var bar1 = new ldBar(".ldBar");
+            bar1.set(100);
+           
+      </script>
+            <!--<img src="images/favicon.png">-->
+        </div>
+</div>
+    
+    <div id="load">
+    </div>
+
+    <div id="contents">
+        <header>
+            <ul id="dropdown1" class="dropdown-content">
+                <li><a href="Noesis.html" class="drp">Noesis</a></li>
+                <li><a href="Techno.html" class="drp">Technosearch</a></li>
+                <li><a href="workshop.html" class="drp">Workshop</a></li>
+            </ul>
+            <ul id="dropdown2" class="dropdown-content">
+                <!--<li><a href="sophomores.html" class="drp">Sophomores</a></li>-->
+                <li><a href="prefinal.html" class="drp">Pre-Final Year</a></li>
+                <li><a href="finalyr.html" class="drp">Final Year</a></li>
+            </ul>
+            <nav class="target">
+                <div class="nav-wrapper" style="padding-left: 30px;padding-right: 25px">
+                    <a href="#" class="brand-logo" style="padding-top: 8px;"><img src="images/logo_dark_old.png" alt=""
+                            height="30" width="97"></a>
+                    <a href="#" data-activates="mobile-demo" class="button-collapse right"><i class="material-icons">menu</i></a>
+                    <ul class="right hide-on-med-and-down">
+                        <li class="active"><a href="index.html">home</a></li>
+                        <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Events<i class="material-icons right drop">arrow_drop_down</i></a></li>
+                        <li><a href="gallery.html">gallery</a></li>
+                        <li><a class="dropdown-button" href="#!" data-activates="dropdown2">Team<i class="material-icons right drop">arrow_drop_down</i></a></li>
+                    </ul>
+                </div>
+            </nav>
+
+        </header>
+        <ul id="dropdown3" class="dropdown-content side">
+            <li><a href="Noesis.html" class="drp">Noesis</a></li>
+            <li><a href="Techno.html" class="drp">Technosearch</a></li>
+            <li><a href="workshop.html" class="drp">Workshop</a></li>
+        </ul>
+        <ul id="dropdown4" class="dropdown-content side">
+            <li><a href="prefinal.html" class="drp">Pre-Final Year</a></li>
+            <li><a href="finalyr.html" class="drp">Final Year</a></li>
+        </ul>
+        <ul class="side-nav" id="mobile-demo">
+            <li class="active"><a href="index.html">home</a></li>
+            <li><a class="dropdown-button" href="#!" data-activates="dropdown3">Events<i class="material-icons right">arrow_drop_down</i></a>
+            </li>
+            <li><a href="gallery.html">gallery</a></li>
+            <li><a class="dropdown-button" href="#!" data-activates="dropdown4">Team<i class="material-icons right">arrow_drop_down</i></a>
+            </li>
+        </ul>
+
+        <main>
+            <div class="bg-container">
+                <h1 id="title" class="ready">
+                    <span><span style="text-transform: none">Where Knowledge meets Innovation</span></span>
+
+                </h1>
+                <img class="clear-image" src="https://image.ibb.co/kQKpcT/My_Post_1.jpg" alt="">
+            </div>
+
+        <div class="parallax-container"  id="recruitsoon" style="background-color: rgba(255,255,255,0.5) ">
+                <div class="parallax"><img src="images/recruit.png" style="filter: grayscale(100%);"></div>
+                <div class="v-align">
+                    <div class="row">
+                        <div class="col l12 m12 s12" id="recruit">
+                        
+                            <h2 style="color: lime;font-family: Courier;color: #000;">
+                              <span
+                                 class="txt-rotate"
+                                 data-period="1000"
+                                 data-rotate='[ "LEARN", "INNOVATE", "EXPLORE" ]'></span>
+                            </h2>
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+            <!--   <div class="parallax-container"  id="noesissoon" style="background-color: rgba(255,255,255,0.5) ">
+                <div class="parallax"><img src="https://preview.ibb.co/ncxMS9/White_Abstract_background_4.jpg"></div>
+                <div class="v-align">
+                    <div class="row">
+                    <div class="col s12 m12 l6">
+
+                        <div class="card">
+        <div class="imgBox">
+            <img src="images/image.jpg" >
+            
+        </div>
+        <div class="details" style="width: 100%;">
+                <p  id="noesisbookstatement" style="position: absolute;font-family: 'Josefin Sans', sans-serif;">Noesis is an annual mega event of VISION,the technical society of NIT-Bhopal.<br><br>Started in 2011,it challenges engineering students across domains every year.
+
+                    <br><br>
+                    </p>
+                    <span style="" id="comingsoon">COMING SOON</span>
+                <br>
+
+                
+            </div>
+            </div>
+
+                    </div>
+                    <div class="col s12 m12 l6">
+
+                        <div id="noesisnotice" style="">
+                            <h1 style="font-family: 'Josefin Sans', sans-serif;">NOESIS 5.0</h1>
+                            <p style="font-family: 'Josefin Sans', sans-serif;">We are continually faced by great opportunities brilliantly disguised as insoluble problems.<br> With that thought in mind, Vision, announces the 5th edition of NOESIS, a platform which is yet again going to challenge your engineering skills across various domains. <br><br><br>Only this time, it's going to be harder than what you have seen.</p><br>
+                              <div id="ca-link" style="margin-bottom: 5px;">
+                               <a href="https://www.visionmanit.org/noesis05.html" class="line-outline" data-hover="Explore Noesis 5.0"><span>Explore Noesis 5.0</span></a>
+                              </div>
+
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            -->
+<!--
+
+            <div class="parallax-container" style="background-color: rgba(255,255,255,0.5) ">
+                <div class="parallax"><img src="https://preview.ibb.co/ncxMS9/White_Abstract_background_4.jpg"></div>
+                <div class="v-align">
+                    <div class="row">
+                        <div class="col s12 center-align" style="margin: 10px">
+                            <h2 style="color: #444;font-weight: bold;">Live Events</h2>
+                            <h3>This Technosearch</h3>
+                        </div>
+
+                    </div>
+                    <div class="row ev container">
+                        <div class="col s12 m12 l6">
+                            <div class="item">
+                                <div class="toolBox">
+                                    <div class="content">
+                                        <div class="content-overlay"></div>
+                                        <img class="content-image" style="height: 260px" src="images/techno/code_kriegers_18.jpg">
+                                        <div class="content-details fadeIn-bottom">
+                                            <div class="content-more" onclick="window.open('https://drive.google.com/file/d/1iKEFuB7qwzL6rqNonqjgEA0AprQ5KcRJ/view','_blank')" style="cursor: pointer;">More</div>
+                                        </div>
+
+                                    </div>
+                                    <div class="title">Code Kriegers 5.0</div>
+                                    <div class="subTitle">Gear up for the next version of Code Kriegers</div>
+                                          <a href="https://docs.google.com/forms/d/e/1FAIpQLSeX20Ukh1BDSBi8LBk_lZnyD_3HCAoSXFee1MTv_Z239fA5jA/viewform" target="_blank" class="waves-effect waves-light btn">Register Here</a> 
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col s12 m12 l6">
+                            <div class="item">
+                                <div class="toolBox">
+                                    <div class="content">
+                                        <div class="content-overlay"></div>
+                                        <img class="content-image" style="height: 260px" src="images/techno/robofifa_18.jpg">
+                                        <div class="content-details fadeIn-bottom">
+                                            <div class="content-more" onclick="window.open('https://drive.google.com/file/d/1qDuJ8Uh9z7fRoLgzTEnn9XjZMuRmOxtM/view','_blank')"
+                                                style="cursor: pointer;">More</div>
+                                        </div>
+                                    </div>
+                                    <div class="title">Robo-Fifa</div>
+                                    <div class="subTitle">Love football and robot-making?</div>-->
+                                   <!-- <a href="https://docs.google.com/forms/d/e/1FAIpQLSdVEjIDqQcnLtd-FLKV7j00--I7Osb_LsEihbnCLGZkKZqSQQ/viewform" target="_blank" class="waves-effect waves-light btn">Register Here</a>-->
+                <!--                </div>
+                            </div>
+                        </div>
+                        <div class="col s12 m12 l6">
+                            <div class="item">
+                                <div class="toolBox">
+                                    <div class="content">
+                                        <div class="content-overlay"></div>
+                                        <img class="content-image" style="height: 260px" src="images/techno/TheLastStand18.jpg">
+                                        <div class="content-details fadeIn-bottom">
+                                            <div class="content-more" onclick="window.open('https://drive.google.com/file/d/1ocxG7JWV7B2hNz7c-AkPYPDn7fdV-bF1/view','_blank')"
+                                                style="cursor: pointer;">More</div>
+                                        </div>
+                                    </div>
+                                    <div class="title">The Last Stand</div>
+                                    <div class="subTitle">Take your manual bots out on a walk</div>-->
+                                   <!-- <a href="https://docs.google.com/forms/d/e/1FAIpQLSfe-b2BXOE8oZcx0jr1-rAgVYMYRRGYlwJFax7RySz5MdWx2A/viewform"  target="_blank" class="waves-effect waves-light btn">Register Here</a>-->
+              <!--                  </div>
+                            </div>
+                        </div>
+                        <div class="col s12 m12 l6">
+                            <div class="item">
+                                <div class="toolBox">
+                                    <div class="content">
+                                        <div class="content-overlay"></div>
+                                        <img class="content-image" style="height: 260px" src="images/techno/SuspensionBridge18.jpg">
+                                        <div class="content-details fadeIn-bottom">
+                                            <div class="content-more" onclick="window.open('https://drive.google.com/file/d/1R1MWLU8HhpX6x3NiELoZ4wLLpAaWUWPx/view','_blank')"
+                                                style="cursor: pointer;">More</div>
+                                        </div>
+                                    </div>
+                                    <div class="title">The Suspension Bridge</div>
+                                    <div class="subTitle">A model making event</div>-->
+                                    <!--<a href="https://docs.google.com/forms/d/e/1FAIpQLSff5TBPRspxlKSWmEp0m48E_0oa7n5oXoKd2v8DMMWym1WVQA/viewform"  target="_blank" class="waves-effect waves-light btn">Register Here</a>-->
+                               <!-- </div>
+                            </div>
+                        </div>
+                    </div> -->
+                   <!--<div class="roe ev container">
+                        <h2 style="color:#444444;font-size:30px">Our Sponsors this Technosearch</h2>
+                    </div> 
+                    <div class="row ev container">
+                        <div class="s12 m12 l12">
+                            <h3 style="color:#444444">Institute Sponsors</h3>
+                        </div>
+                        <div class="cspacer"></div>
+                        <div class="col s12 m12 l4 spon">
+                            <a href="https://www.google.co.in/maps?rlz=1C1CHZL_enIN755IN755&q=ice+group+bhopal&um=1&ie=UTF-8&sa=X&ved=0ahUKEwjc6pep8aTeAhVJrY8KHQ_-AtAQ_AUIDygC" class="brand-logo" style="padding-top: 8px;"><img src="images/ice.jpg" alt=""
+                                height="120" width="110"></a>
+                            <h6>Ice group of education</h6>
+                        </div>
+                        <div class="col s12 m12 l4 spon">
+                            <a href="https://www.google.co.in/maps/place/Kautilya+Academy+Bhopal/@23.2291242,77.4344638,17z/data=!3m1!4b1!4m5!3m4!1s0x397c4242d85fc4bf:0x9763790b87aa56f5!8m2!3d23.2291242!4d77.4366525" class="brand-logo" style="padding-top: 8px;"><img src="images/kautilya.jpg" alt=""
+                                height="120" width="190"></a>
+                            <h6>Kautilya Academy</h6>
+                        </div>
+                        <div class="col s12 m12 l4">
+                            <a href="https://www.mgicsindore.com/" class="brand-logo" style="padding-top: 8px;"><img src="images/mahatma.jpg" alt=""
+                                height="120" width="110"></a>
+                            <h6>MGI for civil services</h6>
+                        </div>
+                    </div>
+                    <div class="row ev container">
+                           <div class="s12 m12 l12">
+                            <h3 style="color:#444444">Food Sponsors</h3>
+                        </div>
+                        <div class="cspacer"></div>
+                        <div class="col s12 m12 l3 offset-l3 spon">
+                            <a href="https://www.google.com/maps/place/Cafe+Mojo+Jojo/@23.2066212,77.3615722,12z/data=!4m5!3m4!1s0x397c43acee7433af:0xbb03a21b9ef469a9!8m2!3d23.2066111!4d77.4316111" class="brand-logo" style="padding-top: 8px;"><img src="images/mojo.jpg" alt=""
+                                height="110" width="110"></a>
+                            <h6>Cafe Mojo Jojo</h6>
+                        </div>
+                        <div class="col s12 m12 l3">
+                            <a href="https://www.google.com/maps/place/Hungry+Like+Us/@23.2279069,77.4303008,17z/data=!3m1!4b1!4m5!3m4!1s0x397c43391093f66f:0xaf905c239987c9e2!8m2!3d23.2279069!4d77.4324895" class="brand-logo" style="padding-top: 8px;"><img src="images/hungry.jpg" alt=""
+                                height="110" width="110"></a>
+                            <h6>Hungry Like Us</h6>
+                        </div>
+                    </div>-->
+                </div>
+            </div>
+            <div class="parallax-container" style="background-color: rgba(12,12,12,0.84);">
+                <div class="parallax"><img src="images/bgImg.jpg"></div>
+                <div class="v-align">
+                    <div class="row">
+                        <div class="col s12 center-align">
+                            <h3 style="color: #fff">Achievements</h3>
+                        </div>
+                    </div>
+                    <div class="spacer"></div>
+                    <div class="row">
+
+                        <div class="col s12 m4 l4 center-align">
+                            <div class="icon-top">
+                                <span class="linearicons lnr lnr-rocket" style="color: #d8d8d8;"></span>
+                            </div>
+                            <div id="counter">
+                                <div class="counter-value" data-count="300" style="color: #d8d8d8;font-size: 26px;">0</div>
+                            </div>
+                            <h6 class="type">Workshops</h6>
+                        </div>
+                        <div class="col s12 m4 l4 center-align licon">
+                            <div class="icon-top">
+                                <span class="linearicons lnr lnr-clock" style="color: #d8d8d8;"></span>
+                            </div>
+                            <div id="counter">
+                                <div class="counter-value" data-count="2400" style="color: #d8d8d8;font-size: 26px;">0</div>
+                            </div>
+                            <h6 class="type">Hours</h6>
+                        </div>
+                        <div class="col s12 m4 l4 center-align licon">
+                            <div class="icon-top">
+                                <span class="linearicons lnr lnr-users" style="color: #d8d8d8;"></span>
+                            </div>
+                            <div id="counter">
+                                <div class="counter-value" data-count="150000" style="color: #d8d8d8;font-size: 26px;">0</div>
+                            </div>
+                            <h6 class="type">Participants</h6>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="parallax-container" style="background-color: rgba(255,255,255,0.5) ">
+                <div class="parallax"><img src="https://preview.ibb.co/ncxMS9/White_Abstract_background_4.jpg"></div>
+
+                <div class="row container">
+                    <div class="cspacer"></div>
+                    <h2 class="header">About Us</h2>
+                    <p class="subHeadText"><strong>Vision </strong>the Technical Society of <strong>NIT Bhopal</strong>
+                        was
+                        founded in 2008 with a goal to inculcate in engineering students the zeal to
+                        <strong>Innovate </strong>and <strong>Invent</strong>.
+                        The idea itself was something big and nothing less than a vision hence the name. We organise
+                        <strong>Informative Workshops</strong>, <strong>Seminars</strong> and <strong>Annual Events</strong>
+                        to pass on knowledge related to <strong>Various Engineering Branches</strong>.<br><br>
+                        Vision provides a <strong>Suitable Platform </strong>for the students to showcase their <strong>technical
+                            skills</strong>. We motivate them for <strong>Research</strong> and <strong>Development</strong>
+                        work in any engineering domain. We also guide them to <strong>Develop Projects </strong>and
+                        Explore
+                        the hot <strong>Research Areas</strong> of today(as much as its possible) and to support
+                        them financially(selected teams).<br><br>
+                        We provide them <strong>Suitable Facilities</strong> for their research work. (like by
+                        providing
+                        24X7 lab and equipments). Our aim is to motivate students in achieving the
+                        in <strong>Depth Knowledge</strong> of their respective branches.</p>
+                    <div class="cspacer"></div>
+                </div>
+            </div>
+            <div class="parallax-container" style="background-color: rgba(12,12,12,0.84);">
+                <div class="parallax"><img src="images/bgImg.jpg"></div>
+                <div class="container" style="color:#d8d8d8;" style="text-align:center">
+                    <div class="cspacer"></div>
+                    <h2 class="header" style="text-align:center">Contact Us</h2>
+
+                    <div class="row con" style="text-align:center">
+                        <div class="col s12 m12 l6 contact">
+
+                            <h5><i class="fa fa-map-marker"></i> Address: </h5><Address>Vision Room NTB,Maulana Azad
+                                National Institute of technology</Address>
+                        </div>
+                        <div class="col s12 m12 l6 contact">
+                            <h5><i class="fa fa-envelope"></i> Email: </h5><address><a href="mailto:info@visionmanit.org"
+                                    style="color:#DC7633;">info@visionmanit.org</a></address>
+                        </div>
+                    </div>
+                    <div class="row con" style="text-align:center">
+                        <div class="col s12 m12 l6 contact">
+                            <h5><i class="fa fa-phone"></i> Contact: </h5><address><a href="tel:+919455525935" style="color:aqua">+91-9455525935</a>,<a
+                                    href="tel:+918989859127" style="color:aqua">+91-8989859127</a></address>
+                        </div>
+                        <div class="col s12 m12 l6 contact">
+                            <h5><i class="fa fa-whatsapp"></i> WhatsApp: </h5><address style="color:aquamarine">+91-9455525935,+91-8989859127</address>
+                        </div>
+                    </div>
+                    <div class="cspacer"></div>
+                    <div class="col s12 m12 l6" style="text-align:center">
+                        <h5>Find Us On Map: </h5>
+                    </div>
+                    <div class="cspacer"></div>
+
+                </div>
+            </div>
+            <div class="mapouter">
+                <div class="gmap_canvas">
+                    <iframe width="100%" height="400" id="gmap_canvas" src="https://maps.google.com/maps?q=New%20Teaching%20Block%2C%20Maulana%20Azad%20National%20Institute%20of%20Technology%2C%20Bhopal%2C%20Madhya%20Pradesh%20462007%2C%20India&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                        frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+                    </iframe>
+                </div>
+            </div>
+            <div class='scrolltop'>
+                <div class='scrollicon'>
+                    <i class="fa fa-4x fa-angle-up"></i>
+                </div>
+            </div>
+
+        </main>
+        <footer class="page-footer">
+            <div class="second-footer">
+                <div class="inner-footer">
+                    <h5 class="footer-logo center-align"><img src="images/logo_dark_old.png" alt="" height="30" width="90">
+                    </h5>
+                    <div class="social-icon">
+                        <ul>
+                            <li><a href="https://www.facebook.com/visionmanit/"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="https://www.youtube.com/channel/UCxX8igM4ziEZGXn9ZmXoBMA"><i class="fa fa-youtube-play"></i></a></li>
+                            
+                        </ul>
+                    </div>
+                    <div class="center-align" style="color:#444;font-size:9px;">Made with <span style="color: #000;">&hearts;</span>
+					by Ankit, Aniket &amp; Rishabh</div>
+                    <div class="copyright">
+                        <p>Vision &copy; All Rights Reserved 2018</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.tabs').tabs();
+        });
+    </script>
+
+    <script src="js/mod.js"></script>
+    <script src="js/canvas.js"></script>
+    <script src="js/counter.js"></script>
+    <script src="js/scrollback.js"></script>
+</body>
+<script>
+    
+    $(document).ready(function () {
+        setTimeout(function () {
+            $("#overlay-loader").slideUp("");
+        }, 7000);
+    })
+</script>
+<script type="text/javascript">
+
+    var TxtRotate = function(el, toRotate, period) {
+  this.toRotate = toRotate;
+  this.el = el;
+  this.loopNum = 0;
+  this.period = parseInt(period, 10) || 100;
+  this.txt = '';
+  this.tick();
+  this.isDeleting = false;
+};
+
+TxtRotate.prototype.tick = function() {
+  var i = this.loopNum % this.toRotate.length;
+  var fullTxt = this.toRotate[i];
+
+  if (this.isDeleting) {
+    this.txt = fullTxt.substring(0, this.txt.length - 1);
+  } else {
+    this.txt = fullTxt.substring(0, this.txt.length + 1);
+  }
+
+  this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+  var that = this;
+  var delta = 300 - Math.random() * 100;
+
+  if (this.isDeleting) { delta /= 2; }
+
+  if (!this.isDeleting && this.txt === fullTxt) {
+    delta = this.period;
+    this.isDeleting = true;
+  } else if (this.isDeleting && this.txt === '') {
+    this.isDeleting = false;
+    this.loopNum++;
+    delta = 500;
+  }
+
+  setTimeout(function() {
+    that.tick();
+  }, delta);
+};
+
+window.onload = function() {
+  var elements = document.getElementsByClassName('txt-rotate');
+  for (var i=0; i<elements.length; i++) {
+    var toRotate = elements[i].getAttribute('data-rotate');
+    var period = elements[i].getAttribute('data-period');
+    if (toRotate) {
+      new TxtRotate(elements[i], JSON.parse(toRotate), period);
+    }
+  }
+  var css = document.createElement("style");
+  css.type = "text/css";
+  css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #666;font-family: Courier;color: #000; }";
+  document.body.appendChild(css);
+};
+
+</script>
+</html>
